@@ -112,6 +112,7 @@ h1{
 }
 .skillsElements{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 97px;
 }
@@ -120,6 +121,9 @@ h1{
     flex-direction: column;
     gap: 60px;
     align-items: center;
+}
+.element:last-child{
+    gap: 70px;
 }
 .imgtext{
     font-weight: 700;
