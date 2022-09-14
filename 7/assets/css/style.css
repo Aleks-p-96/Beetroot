@@ -1,0 +1,68 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.container{
+    margin: 0 auto;
+    max-width: 534px;;
+}
+header{
+    padding: 19px 0 12px 0;
+    text-align: center;
+    color: #FF8984;
+    font-size: 16px;
+    line-height: 19px;
+    background: #4A4F56;
+}
+h1{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+main{
+    background: #3B3F45;
+    padding: 20px 0 45px 0;
+}
+.listElement{
+    display: block;
+    padding: 12px 0;
+    color: #FFFFFF;
+}
+span + span{
+    font-size: 11px;
+    line-height: 13px;
+}
+input + span{
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 16px;
+}
+div > label:nth-child(2n+1){
+    background: #88839E;
+}
+div > label:nth-child(2n){
+    background: #7A7593;
+}
+[type=checkbox]{
+    margin-left: 12px;
+}
+.shoppingList label:last-child{
+    margin-bottom: 45px;
+}
+#button{
+    display: block;
+    width: 100%;
+    color: #FF8984;
+    background: #4A4F56;
+    padding: 12px 0 ;
+}
+.shoppingList > *:hover{
+    background: #625E77;
+    border-top: #FFFFFF solid 2px;
+    border-bottom: #FFFFFF solid 2px;
+    padding: 8px;
+}
+input:checked ~ span{
+    text-decoration: line-through;
+}
