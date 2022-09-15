@@ -46,6 +46,7 @@ header div *{
     font-weight: 600;
 }
 .headerButton + .headerButton{
+    color:#FFFFFF;
     background: #FF9900;
     margin-left: 32px;
 }
