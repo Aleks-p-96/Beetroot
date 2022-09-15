@@ -18,6 +18,7 @@ header div *{
 }
 .logo{
     margin-right: 198px;
+    vertical-align: middle;
 }
 .nav{
     font-weight: 400;
@@ -29,6 +30,7 @@ header div *{
 }
 .nav a{margin-right: 20px;
     color: #2F281E;
+    vertical-align: middle;
 }
 .nav a:last-child{
     margin-right: 0px;
