@@ -51,13 +51,16 @@ header div *{
     margin-left: 32px;
 }
 .firstText{
-    max-width: 500px;;
+    max-width: 500px;
+    vertical-align: middle;
     display: inline-block;
-    padding: 97px 0;
 }
 h1,h2,h3{
     color: #2F281E;
     font-weight: 700;
+}
+.firstSectionimg{
+    vertical-align: middle;
 }
 h1{
     font-size: 44px;
