@@ -66,3 +66,6 @@ div > label:nth-child(2n){
 input:checked ~ span{
     text-decoration: line-through;
 }
+.shoppingList > *:active{
+    opacity: 0.5;
+}
