@@ -1,0 +1,277 @@
+/* font-family: 'Delius Unicase', cursive;
+font-family: 'Roboto', sans-serif */
+main{
+    padding: 120px 0;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.firstSection,.secondSection{
+    margin-bottom: 120px;
+}
+.sectionTitle{
+    font-family: 'Delius Unicase';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 80px;
+}
+.firstGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(3, 370px);
+    grid-gap: 30px;
+}
+.secondGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(4, 370px);
+    grid-gap: 30px;
+}
+.thirdGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(5, 370px);
+    grid-gap: 30px;
+}
+.flexElem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.name{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.date{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E0E0E0;
+}
+.icon{
+    padding: 10px;
+    background: rgba(224, 224, 224, 0.5);
+    border-radius: 8px; 
+}
+.icon:hover{
+    background: #E0E0E0;
+}
+.icons{
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.flexElem:hover .icons{
+    opacity: 1;
+}
+
+.firstGridElement1{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_1.png);   
+}
+.firstGridElement1:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_1.png);  
+}
+
+.firstGridElement2{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_2.png);   
+    grid-column: 2/4;
+}
+.firstGridElement2:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_2.png);  
+}
+
+.firstGridElement3{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_3.png);
+    grid-column: 1/3;   
+}
+.firstGridElement3:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_3.png);  
+}
+
+.firstGridElement4{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_4.png);   
+}
+.firstGridElement4:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_4.png);  
+}
+
+.firstGridElement5{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_5.png);   
+}
+.firstGridElement5:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_5.png);  
+}
+
+.firstGridElement6{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image1_6.png);  
+    grid-column: 2/4; 
+}
+.firstGridElement6:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image1_6.png);  
+}
+
+
+
+.secondGridElement1{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_1.png);   
+}
+.secondtGridElement1:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_1.png);  
+}
+
+.secondtGridElement2{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_2.png);   
+    grid-column: 2/4;
+}
+.secondGridElement2:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_2.png);  
+}
+
+.secondGridElement3{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_3.png);
+    grid-column: 1/3;
+    grid-row: 2/4;   
+}
+.secondGridElement3:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_3.png);  
+}
+
+.secondGridElement4{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_4.png);
+    grid-column: 3/4;
+    grid-row: 2/4;   
+}
+.secondGridElement4:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_4.png);  
+}
+
+.secondGridElement5{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_5.png);   
+    grid-column: 1/3; 
+}
+.secondGridElement5:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_5.png);  
+}
+
+.secondGridElement6{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image2_6.png);  
+
+}
+.secondGridElement6:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image2_6.png);  
+}
+
+
+
+.thirdGridElement1{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_1.png);   
+}
+.thirdGridElement1:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_1.png);  
+}
+
+.thirdGridElement2{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_2.png);   
+    grid-column: 2;
+    grid-row: 1/3;
+}
+.thirdGridElement2:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_2.png);  
+}
+
+.thirdGridElement3{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_3.png);
+
+}
+.thirdGridElement3:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_3.png);  
+}
+
+.thirdGridElement4{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_4.png);   
+}
+.thirdGridElement4:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_4.png);  
+}
+
+.thirdGridElement5{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_5.png);  
+    grid-area: 2/3 / 4/4;
+}
+.thirdGridElement5:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_5.png);  
+}
+
+.thirdGridElement6{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_6.png);  
+    grid-row: 3/5;
+}
+.thirdGridElement6:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_6.png);  
+}
+
+.thirdGridElement7{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_7.png);  
+}
+.thirdGridElement7:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_7.png);  
+}
+
+.thirdGridElement8{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_8.png);  
+    grid-column: 2/4; 
+}
+.thirdGridElement8:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_8.png);  
+}
+
+.thirdGridElement9{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_9.png);  
+    grid-column: 1/3; 
+}
+.thirdGridElement9:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_9.png);  
+}
+
+.thirdGridElement10{
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(../img/image3_10.png);  
+}
+.thirdGridElement10:hover{
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%), url(../img/image3_10.png);  
+}
