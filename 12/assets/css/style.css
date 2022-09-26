@@ -1,0 +1,111 @@
+/* font-family: 'Farro', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'Tourney', cursive; */
+
+.header {
+    padding: 13px 0;
+}
+.header--margin-bottom-70{
+    margin-bottom: 70px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__left {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.header__left__text {
+    font-family: 'Tourney';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+}
+.header__left__nav {
+    display: flex;
+    gap: 10px;
+}
+.nav {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    mix-blend-mode: normal;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.nav__link {
+    color: #000000;
+}
+.underline{
+    text-decoration: underline;
+}
+.italic{
+    font-style: italic;
+}
+.bold{
+    font-weight: 700;
+}
+.gray-bg{
+    background-color: rgb(203, 199, 199);
+}
+.main {
+    padding-bottom: 90px;
+}
+.main__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+}
+.main__section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.section__title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+.title__first {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;  
+    color: #000000;
+
+}
+.title__second {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+.section__text {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+.underline {
+}
