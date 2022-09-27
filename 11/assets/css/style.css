@@ -66,6 +66,7 @@
     text-transform: uppercase;
     padding-bottom: 24px;
     position: relative;
+    color: #3C3C3C;
 }
 .main-section__title::after{
     position: absolute;
@@ -161,7 +162,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 28px;
 }
 .footer__socials .socials__item{
     border: 1px solid #18B5DC;
