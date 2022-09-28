@@ -189,7 +189,7 @@ font-family: 'Tourney', cursive; */
     transition: transform 1s;
 }
 .cards__element:hover .cards__image{
-    opacity: 1;
+    opacity: 0;
 }
 .cards__image--hover{
     transform: rotateX(180deg);
