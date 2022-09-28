@@ -9,7 +9,16 @@ font-family: 'Roboto', sans-serif; */
 }
 .header{
     padding: 22px 0;
+    border-bottom: 1px solid #EFEEF3;
 }
+.footer__icons svg {
+    fill:#0D0D0D;
+  }
+
+.footer__icons svg:hover {
+    fill: #3DB370;;
+  }
+  
 .main--padding100{
     padding: 100px 0;
 }
@@ -66,7 +75,17 @@ font-family: 'Roboto', sans-serif; */
     fill: #F4FEFF;;
 }
 .card__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(21, 101, 216, 0.1);
+    border-radius: 16px;
 }
+.card__icon {   
+    border: 1px solid rgba(61, 179, 112, 0.1);
+} 
 .card__title {
     font-family: 'Roboto';
     font-style: normal;
