@@ -1,0 +1,123 @@
+/* font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+:root{
+    color: #007FFC;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.header{
+    padding: 22px 0;
+}
+.main--padding100{
+    padding: 100px 0;
+}
+.main__subtitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #7690A8;
+}
+.main__title{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    color: #16133D; 
+}
+.main__subtitle + .main__title{
+    margin: 15px 0 40px 0;
+}
+.main__cards{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+}
+.card__element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 30px;
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+}
+.card__element:hover{
+    border: 1px solid #3DB370;
+}
+.card__element:hover .fillcolor{
+    fill: #52C29D;;
+}
+.card__element:hover .fillcolor1{
+    fill: #E1F4F5;
+}
+.card__element:hover .fillcolor2{
+    fill: #CAEFF2;
+}
+.card__element:hover .fillcolor3{
+    fill: #F4FEFF;;
+}
+.card__icon {
+}
+.card__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    color: #16133D;
+}
+.card__subtitle {
+    max-width: 275px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #16133D;
+}
+.card__title + .card__subtitle{
+    margin-top: 15px;
+}
+.card__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3DB370; 
+}
+.footer{
+    background: #16133D;
+}
+.footer--padding40{
+    padding: 40px 0;
+}
+.footer__logo{
+    width: 200px;
+    height: 35px;
+}
+.footer__logo + .footer__icons{
+    margin-top: 40px;
+}
+.icons__element{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+}
+.icons__element svg{
+    width: 38px;
+    height: 38px;
+}
+.icons__element + .icons__element{
+    margin-left: 10px;
+}
