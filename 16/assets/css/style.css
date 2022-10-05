@@ -1,142 +1,198 @@
-/* font-family: 'Nunito Sans', sans-serif;
-font-family: 'Roboto', sans-serif; */
-:root{
-    color: #007FFC;
+.main {
+  padding-top: 122px;
 }
-.container{
-    max-width: 1170px;
-    margin: 0 auto;
-}
-.header{
-    padding: 22px 0;
-    border-bottom: 1px solid #EFEEF3;
-}
-.footer__icons svg {
-    fill:#0D0D0D;
-  }
 
-.footer__icons svg:hover {
-    fill: #3DB370;;
-  }
-  
-.main--padding100{
-    padding: 100px 0;
+.our-team__head + .our-team__content {
+  margin-top: 40px;
 }
-.main__subtitle{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #7690A8;
+
+.head__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  margin: 0 auto;
 }
-.main__title{
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: 0.2px;
-    color: #16133D; 
+.head__subtitle + .head__title {
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
-.main__subtitle + .main__title{
-    margin: 15px 0 40px 0;
+.head__subtitle {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #898F8F;
 }
-.main__cards{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 30px;
+.head__title {
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: #FFCC00;
+  font-size: 60px;
+  line-height: 66px;
 }
-.card__element{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
-    gap: 30px;
-    border: 1px solid #E5EAF4;
-    border-radius: 8px;
+.head__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card__element:hover{
-    border: 1px solid #3DB370;
+.head__line {
+  width: 210px;
+  border: 1px solid #FFCC00;
 }
-.card__element:hover .fillcolor{
-    fill: #52C29D;;
+.head__icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 5px;
 }
-.card__element:hover .fillcolor1{
-    fill: #E1F4F5;
+
+.content__container {
+  max-width: 1030px;
+  margin: 0 auto;
 }
-.card__element:hover .fillcolor2{
-    fill: #CAEFF2;
+.content__wrapper {
+  display: flex;
+  position: relative;
 }
-.card__element:hover .fillcolor3{
-    fill: #F4FEFF;;
+.content__divider-center {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 0px;
+  border: 1px solid #FFCC00;
 }
-.card__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 64px;
-    height: 64px;
-    border: 1px solid rgba(21, 101, 216, 0.1);
-    border-radius: 16px;
+.content__left, .content__right {
+  width: 50%;
+  display: flex;
+  padding: 65px 0 65px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.card__icon {   
-    border: 1px solid rgba(61, 179, 112, 0.1);
-} 
-.card__title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 21px;
-    letter-spacing: 0.2px;
-    color: #16133D;
+.content__left {
+  font-size: 22px;
+  padding-right: 85px;
+  position: relative;
 }
-.card__subtitle {
-    max-width: 275px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    color: #16133D;
+.content__left .left--inner-padding {
+  padding: 15px;
+  position: relative;
 }
-.card__title + .card__subtitle{
-    margin-top: 15px;
+.content__right {
+  padding-left: 85px;
 }
-.card__link {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #3DB370; 
+.content__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
-.footer{
-    background: #16133D;
+.content__info + .content__socials {
+  margin-top: 30px;
+  margin-bottom: 49px;
 }
-.footer--padding40{
-    padding: 40px 0;
+.content__title {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: capitalize;
+  color: #666666;
 }
-.footer__logo{
-    width: 200px;
-    height: 35px;
+.content__divider-right {
+  width: 100px;
+  height: 0px;
+  border: 1px solid #FFCC00;
 }
-.footer__logo + .footer__icons{
-    margin-top: 40px;
+.content__subtitle {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: capitalize;
 }
-.icons__element{
-    display: inline-block;
-    width: 38px;
-    height: 38px;
+.content__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.icons__element svg{
-    width: 38px;
-    height: 38px;
+.content .socials__item {
+  width: 30px;
+  height: 30px;
 }
-.icons__element + .icons__element{
-    margin-left: 10px;
+.content .socials__item + .socials__item {
+  margin-left: 5px;
+}
+.content__text {
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+.content__text + .content__lines {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.content__lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.content__lines .line-1, .content__lines .line-3 {
+  width: 10px;
+  height: 4px;
+  background-color: #FFCC00;
+}
+.content__lines .line-2 {
+  width: 20px;
+  height: 4px;
+  background-color: #FFCC00;
+}
+.content__button {
+  font-family: "Open Sans";
+  color: #666666;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px 10px;
+  border: 1px solid #FFCC00;
+}
+
+.angle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.angle__item {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.angle--1 {
+  top: 0;
+  border-left: 1px solid #FFCC00;
+  border-top: 1px solid #FFCC00;
+}
+.angle--2 {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #FFCC00;
+  border-right: 1px solid #FFCC00;
+}
+.angle--3 {
+  bottom: 0;
+  border-left: 1px solid #FFCC00;
+  border-bottom: 1px solid #FFCC00;
+}
+.angle--4 {
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid #FFCC00;
+  border-bottom: 1px solid #FFCC00;
 }

@@ -1,0 +1,42 @@
+.head {
+    &__container {
+        @include flex-column-center;
+        max-width:450px;
+        margin: 0 auto;
+    }
+    &__subtitle + &__title {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    &__subtitle {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $head-subtitle-color;
+    }
+    &__title {
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        color:$gold;
+        font-size: 60px;
+        line-height: 66px;
+
+    }
+    &__divider {
+        @include flex-row-center;
+
+    }
+
+    &__line {
+        width: 210px;
+        border: 1px solid $gold;
+
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px 0 5px;
+    }
+}

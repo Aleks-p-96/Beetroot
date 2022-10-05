@@ -1,0 +1,132 @@
+.content {
+    
+    
+    &__container {
+        max-width: 1030px;
+        margin: 0 auto
+    }
+    &__wrapper {
+        display: flex;
+        position: relative;
+    }
+    &__divider-center {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        width: 0px;
+        border: 1px solid $gold;
+    }
+    &__left, &__right {
+        width: 50%;
+        display: flex;
+        padding: 65px 0 65px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__left {
+        font-size: 22px;
+        padding-right: 85px;
+        position: relative;
+
+        .left--inner-padding {
+            padding: 15px;
+            position: relative;
+        }
+    }
+
+    &__right {
+        padding-left: 85px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__info + &__socials {
+        margin-top: 30px;
+        margin-bottom: 49px;
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: capitalize;
+        color: $light-grey;
+    }
+
+    &__divider-right {
+        width: 100px;
+        height: 0px;
+        border: 1px solid #FFCC00;
+    }
+
+    
+    &__subtitle {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        
+        text-transform: capitalize;
+    }
+
+    &__socials {
+        @include flex-row-center;
+    }
+
+    .socials__item {
+        width: 30px;
+        height: 30px;
+    }
+    .socials__item + .socials__item {
+        margin-left: 5px;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-grey;
+
+    }
+
+    &__text + &__lines {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__lines {
+        @include flex-row-center;
+        gap: 5px;
+
+        .line-1,.line-3 {
+            width: 10px;
+            height: 4px;
+            background-color: $gold;
+        }
+        .line-2 {
+            width: 20px;
+            height: 4px;
+            background-color: $gold;
+        }
+    }
+
+    &__button {
+        font-family: 'Open Sans';
+        color: $light-grey;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 5px 10px;
+        border: 1px solid $gold;
+    }
+}
