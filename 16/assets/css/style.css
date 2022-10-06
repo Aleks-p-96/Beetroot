@@ -116,11 +116,11 @@
   align-items: center;
   justify-content: center;
 }
-.content .socials__item {
+.content .socials__item, .content .socials__link {
   width: 30px;
   height: 30px;
 }
-.content .socials__item + .socials__item {
+.content .socials__link + .socials__link {
   margin-left: 5px;
 }
 .content__text {

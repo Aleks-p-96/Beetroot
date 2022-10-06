@@ -80,11 +80,13 @@
         @include flex-row-center;
     }
 
-    .socials__item {
+    .socials__item, .socials__link{
         width: 30px;
         height: 30px;
     }
-    .socials__item + .socials__item {
+
+    
+    .socials__link + .socials__link {
         margin-left: 5px;
     }
 
