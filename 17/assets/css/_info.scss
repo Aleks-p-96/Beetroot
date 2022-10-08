@@ -1,0 +1,61 @@
+.info {
+
+    &__container {
+        @extend .container;
+    }
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:1024px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+        @media (max-width:768px) {
+            gap: 35px;
+        }
+    }
+    
+    &__title {
+        
+
+        &__p {
+            font-family: 'Red Hat Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            color: #000000;
+        }
+
+        &__p +&__svg {
+            margin-top: 20px;
+        }
+    }
+    
+    &__text {
+        @media (min-width:1025px) {
+        width: 50%;
+        }
+        &__p + &__p {
+            margin-top: 10px;
+        }
+        &__p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 32px;
+            letter-spacing: 0.05em;
+            color: #565656;
+            @media (max-width:1024px) {
+                text-align: right;
+            }
+            @media (max-width:768px) {
+                text-align:start;
+            }
+        }
+    }
+}
+    

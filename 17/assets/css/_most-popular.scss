@@ -1,0 +1,111 @@
+.most-popular {
+    &__container {
+        @extend .container;
+    }
+
+    &__wrapper {
+        @include flex-column;
+        gap: 50px;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width:480px) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        &__title {
+            @extend .section-title;
+            
+        }
+
+        &__text {
+            @extend .description;
+            color: $grey-500;
+
+            &__arrow {
+
+            }
+        }
+    }
+
+    // @media (max-width:768px)
+    // @media (max-width:1024px)
+
+    &__elements {
+        display: flex;
+        gap: 30px;
+        @media (max-width:1024px) {
+            gap: 20px;
+        }
+        @media (max-width:768px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 50%;
+            @media (max-width:768px) {
+                gap: 10px;
+                width: 100%;
+            }
+
+            &__picture {
+
+                @media (max-width:768px) {
+                    width: 100%;
+                }
+            }
+
+            &__image {
+                width: 100%;
+                
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &__top {
+                    display: flex;
+                    justify-content: space-between;
+                    @extend .date;
+                }
+
+                &__title {
+                    @extend .title;
+
+                }
+
+                &__description {
+                    @extend .description
+                }
+            }
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__css {
+                color: $white;
+                background-color: $grey-700;
+                padding: 9.5px 45px;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 166%;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.footer {
+    padding: 70px 0 30px 0;
+    background-color: $grey-100;
+    @media (max-width:1024px) {
+        padding: 50px 0;
+    }
+    &__container {
+        @extend .container;
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+        @media(max-width:1024px) {
+            gap: 40px;
+        }
+    }
+
+    &__first {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width:1024px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media(max-width:1024px) {
+            gap: 20px;
+        }
+
+        &__title {
+            font-family: 'Red Hat Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 64px;
+            letter-spacing: 0.05em;
+            color: $black;
+            
+        }
+
+        &__text {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            color: $black;
+            @media(max-width:1024px) {
+                text-align: center;
+            }
+
+            &__element + &__element {
+                margin-top: 15px;
+            }
+        }
+    }
+    
+    &__socials {
+
+        display: flex;
+        gap: 23px;
+        &__link {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            color: $grey-700;
+            border: 1px solid $grey-700;
+        }
+
+        :hover,:active {
+            color: $white;
+            background-color: $grey-700;
+        }
+
+        &__icon {
+            font-size: 24px;
+        }
+    }
+    
+    &__copyright {
+        &__text {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+    }
+
+}

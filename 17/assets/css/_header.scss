@@ -1,0 +1,93 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 1;
+
+    &__container {
+        @extend .container;
+    }
+
+    &__wrapper {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0 40px 0;
+    }
+
+    &__logo {
+        height: 12px;
+        width: 142px;
+
+        &__svg {
+            height: 12px;
+            width: 142px;
+        }
+    }
+
+    &__right {
+        @include flex-row;
+        gap: 50px;
+    }
+
+    &__menu {
+        @include flex-row;
+        gap: 42px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        &__link {
+            font-family: 'Lato';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: $black;
+    
+        }
+
+        &__link:active {
+            text-decoration: underline;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+
+
+        &__input {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 166.3%;
+            letter-spacing: 0.1em;
+            color: $grey-500;
+            display: none;
+        }
+
+        &:hover &__input{
+            display: flex;
+        }
+    }
+
+    &__burger {
+        display: none;
+        @media (max-width: 1024px) {
+            display: inline-block;
+        }
+    }
+    &__icon {
+        width: 17px;
+        height: 16px;
+        &__svg{
+            width: 17px;
+            height: 16px;
+        }
+    }
+}
