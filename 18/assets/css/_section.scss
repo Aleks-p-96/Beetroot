@@ -1,0 +1,28 @@
+.section {
+    
+    & + & {
+        margin-top: 90px;
+        @media(max-width: 768px) {
+            margin-top: 70px;
+        }
+    }
+
+    &__container {
+        @extend .container;
+    }
+    
+    &__title {
+        @extend .section-title
+    }
+    &__title + &__picture {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    &__p {
+        @include section-font;
+    }
+    &__p + &__p {
+        margin-top: 50px;
+    }
+}
+    

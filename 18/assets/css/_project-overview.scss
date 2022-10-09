@@ -1,0 +1,32 @@
+.project-overview {
+
+    &__container {
+        @extend .container;
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    &__title {
+        @extend .section-title
+    }
+    
+    &__p {
+        @include section-font;
+        max-width: 570px;
+        @media(max-width: 768px) {
+            max-width: none;
+        }
+    }
+
+    &__p + &__p {
+        margin-bottom: 90px;
+        @media(max-width: 768px) {
+            margin-bottom: 70px;
+        }
+    }
+}
+    

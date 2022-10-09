@@ -1,0 +1,19 @@
+.first-section {
+    &__container {
+        @extend .container;
+    }
+
+    &__title {
+        @include font-main-title;
+    }
+
+    &__title + &__picture {
+        margin: 70px 0 90px 0;
+        @media (max-width:1024px) {
+            margin: 50px 0 90px 0;
+        }
+        @media (max-width:568px) {
+            margin: 40px 0 70px 0;
+        }
+    }
+}
