@@ -7,6 +7,9 @@
         @include font-main-title;
     }
 
+    &__picture {
+        width: 100%;
+    }
     &__title + &__picture {
         margin: 70px 0 90px 0;
         @media (max-width:1024px) {

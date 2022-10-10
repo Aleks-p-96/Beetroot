@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 18</title>
     <link rel="stylesheet" href="../zero.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -21,16 +24,14 @@
                 <h1 class="first-section__title">
                     AI Fashion Platform
                 </h1>
-                <img class="first-section__picture" srcset="
-                        assets/images/image1-3.png 300w,
-                        assets/images/image1-2.png 700w,
-                        assets/images/image1.png 1170w"
-                    src="assets/images/image1.png"
-                    sizes="
-                        (max-width:576px) 300px,
-                        (max-width:992px) 700px,
-                        1170 px"
-                    alt="image">
+                <div class="first-section__picture">
+                    <picture>
+                        <source srcset="assets/images/image1-3.png" type="image/png" media="(max-width:576px">
+                        <source srcset="assets/images/image1-2.png" type="image/png" media="(max-width:992px">
+                        <source srcset="assets/images/image1.png" type="image/png" media="(min-width:993px">
+                        <img src="assets/images/image1.png" alt="image">
+                    </picture>
+                </div>
             </div>
         </section>
         <section class="project-overview">
@@ -53,16 +54,14 @@
                 <div class="section__title">
                     User Research and Personas
                 </div>
-                <img class="section__picture" srcset="
-                        assets/images/image2-3.png 300w,
-                        assets/images/image2-2.png 700w,
-                        assets/images/image2.png 1170w"
-                    src="assets/images/image2.png"
-                    sizes="
-                        (max-width:576px) 300px,
-                        (max-width:992px) 700px,
-                        1170 px"
-                    alt="image">
+                <div class="section__picture">
+                    <picture>
+                        <source srcset="assets/images/image2-3.png" type="image/png" media="(max-width:576px">
+                        <source srcset="assets/images/image2-2.png" type="image/png" media="(max-width:992px">
+                        <source srcset="assets/images/image2.png" type="image/png" media="(min-width:993px">
+                        <img src="assets/images/image2.png" alt="image">
+                    </picture>
+                </div>
                 <p class="section__p">
                     Who is your user? Indicate her KEY personality traits and help round out her overall image.
                 </p>
@@ -76,16 +75,14 @@
                 <div class="section__title">
                     Initial Sketches
                 </div>
-                <img class="section__picture" srcset="
-                        assets/images/image3-3.png 300w,
-                        assets/images/image3-2.png 700w,
-                        assets/images/image3.png 1170w"
-                    src="assets/images/image3.png"
-                    sizes="
-                        (max-width:576px) 300px,
-                        (max-width:992px) 700px,
-                        1170 px"
-                    alt="image">
+                <div class="section__picture">
+                    <picture>
+                        <source srcset="assets/images/image3-3.png" type="image/png" media="(max-width:576px">
+                        <source srcset="assets/images/image3-2.png" type="image/png" media="(max-width:992px">
+                        <source srcset="assets/images/image3.png" type="image/png" media="(min-width:993px">
+                        <img src="assets/images/image3.png" alt="image">
+                    </picture>
+                </div>
                 <p class="section__p">
                     In the beginning, It’s just about brainstorming.
 
@@ -100,19 +97,17 @@
                 <div class="section__title">
                     Final Desp
                 </div>
-                <img class="section__picture" srcset="
-                        assets/images/image4-3.png 300w,
-                        assets/images/image4-2.png 700w,
-                        assets/images/image4.png 1170w"
-                    src="assets/images/image4.png"
-                    sizes="
-                        (max-width:576px) 300px,
-                        (max-width:992px) 700px,
-                        1170 px"
-                    alt="image">
+                <div class="section__picture">
+                    <picture>
+                        <source srcset="assets/images/image4-3.png" type="image/png" media="(max-width:576px">
+                        <source srcset="assets/images/image4-2.png" type="image/png" media="(max-width:992px">
+                        <source srcset="assets/images/image4.png" type="image/png" media="(min-width:993px">
+                        <img src="assets/images/image4.png" alt="image">
+                    </picture>
+                </div>
                 <p class="section__p">
                     I played with adding a wireframe of the website flow that would lead you in to each screen. For each of those screens I added a floating footer that allows users to see where they are in that particular flow and jump around as needed.” We’re digging this InVision-made wireframe.
-                <p
+                </p>
             </div>
         </section>
     </div>
