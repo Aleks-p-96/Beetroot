@@ -577,6 +577,7 @@
   line-height: 64px;
   letter-spacing: 0.05em;
   color: #000000;
+  text-align: center;
 }
 .footer__contacts__text {
   font-family: "Lato";
