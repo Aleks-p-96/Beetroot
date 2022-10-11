@@ -6,6 +6,9 @@
     &__wrapper {
         @include flex-column;
         gap: 50px;
+        @media (max-width:768px) {
+            gap: 30px;
+        }
     }
 
     &__heading {
@@ -47,8 +50,16 @@
         @media (max-width:1024px) {
             flex-direction: column;
         }
+        @media (max-width:768px) {
+            flex-direction: column;
+            gap: 50px;
+        }
 
         &__block {
+            @media (min-width:1025px) {
+                width: 33.33%;
+            }
+
             display: flex;
             flex-direction: column;
             gap: 25px;
@@ -101,7 +112,8 @@
 
                 &__title {
                     @extend .title;
-
+                    font-size: 22px;
+                    margin: 25px 0 20px 0;
                 }
 
                 &__description {

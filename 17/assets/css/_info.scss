@@ -29,9 +29,29 @@
             color: #000000;
         }
 
-        &__p +&__svg {
+        &__link {
+            display: inline-flex;
+            align-items: center;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 166.3%;
+            letter-spacing: 0.1em;
+            color: $black;
+            &__hidden {
+                display: none;
+            }
+            &:hover &__hidden {
+                display: inline-flex;
+            }
+        }
+
+        &__p + &__link {
             margin-top: 20px;
         }
+
+
     }
     
     &__text {

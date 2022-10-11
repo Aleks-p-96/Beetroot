@@ -1,21 +1,19 @@
 * {
     transition:all 0.3s ease;
 }
-.main + .footer {
-    margin-top: 90px;
-}
 .main {
-    position: relative;
-    top: 100px;
+    padding: 100px 0 90px 0;
+    @media (max-width:1024px) {
+        padding: 60px 0 60px 0;
+    }
+    
 
     &__content {
         display: flex;
         flex-direction: column;
         gap: 90px;
-        margin-bottom: 190px;
         @media (max-width:1024px) {
             gap: 70px;
-            margin-bottom: 170px;
         }
     }
 }

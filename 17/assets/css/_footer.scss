@@ -44,6 +44,10 @@
             letter-spacing: 0.05em;
             color: $black;
             text-align: center;
+            @media (max-width:768px) {
+                font-size: 32px;
+                line-height: 42px;
+            }
         }
 
         &__text {
@@ -56,6 +60,10 @@
             color: $black;
             @media(max-width:1024px) {
                 text-align: center;
+            }
+            @media(max-width:768px) {
+                text-align: center;
+                font-size: 18px;
             }
 
             &__element + &__element {

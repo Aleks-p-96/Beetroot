@@ -2,24 +2,22 @@
   transition: all 0.3s ease;
 }
 
-.main + .footer {
-  margin-top: 90px;
-}
-
 .main {
-  position: relative;
-  top: 100px;
+  padding: 100px 0 90px 0;
+}
+@media (max-width: 1024px) {
+  .main {
+    padding: 60px 0 60px 0;
+  }
 }
 .main__content {
   display: flex;
   flex-direction: column;
   gap: 90px;
-  margin-bottom: 190px;
 }
 @media (max-width: 1024px) {
   .main__content {
     gap: 70px;
-    margin-bottom: 170px;
   }
 }
 
@@ -86,6 +84,11 @@
   justify-content: space-between;
   padding: 40px 0 40px 0;
 }
+@media (max-width: 1024px) {
+  .header__wrapper {
+    padding: 20px 0 20px;
+  }
+}
 .header__logo {
   height: 12px;
   width: 142px;
@@ -97,6 +100,7 @@
 .header__right {
   display: flex;
   gap: 50px;
+  align-items: center;
 }
 .header__menu {
   display: flex;
@@ -120,7 +124,7 @@
   text-decoration: underline;
 }
 .header__search {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .header__search__input {
@@ -138,6 +142,7 @@
 }
 .header__burger {
   display: none;
+  height: 20px;
 }
 @media (max-width: 1024px) {
   .header__burger {
@@ -154,35 +159,11 @@
 }
 
 .first-screen {
-  background-image: url(../images/bg-image.png);
-}
-@media (max-width: 768px) {
-  .first-screen {
-    background-image: url(../images/bg-image2.png);
-  }
-}
-@media (max-width: 321px) {
-  .first-screen {
-    background-image: url(../images/bg-image3.png);
-  }
-}
-.first-screen__container {
-  height: 600px;
-  padding-top: 100px;
-}
-@media (max-width: 768px) {
-  .first-screen__container {
-    height: 320px;
-    padding-top: 30px;
-  }
-}
-@media (max-width: 320px) {
-  .first-screen__container {
-    height: 500px;
-    padding-top: 70px;
-  }
+  position: relative;
 }
 .first-screen__text {
+  position: absolute;
+  top: 100px;
   max-width: 750px;
   font-family: "Red Hat Display";
   font-weight: 600;
@@ -192,15 +173,20 @@
 }
 @media (max-width: 1024px) {
   .first-screen__text {
-    max-width: 700px;
+    top: 30px;
+    max-width: 600px;
     font-size: 36px;
     line-height: 50px;
   }
 }
 @media (max-width: 760px) {
   .first-screen__text {
+    top: 70px;
     font-size: 30px;
   }
+}
+.first-screen__background {
+  width: 100%;
 }
 
 .blog__wrapper {
@@ -214,6 +200,11 @@
   font-size: 48px;
   line-height: 64px;
   letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  .blog__title {
+    text-align: center;
+  }
 }
 .blog__article {
   display: flex;
@@ -301,6 +292,11 @@
   flex-direction: column;
   gap: 50px;
 }
+@media (max-width: 768px) {
+  .latest-posts__wrapper {
+    gap: 30px;
+  }
+}
 .latest-posts__heading {
   display: flex;
   align-items: center;
@@ -336,10 +332,21 @@
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  .latest-posts__elements {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 .latest-posts__elements__block {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+@media (min-width: 1025px) {
+  .latest-posts__elements__block {
+    width: 33.33%;
+  }
 }
 @media (max-width: 1024px) {
   .latest-posts__elements__block {
@@ -392,6 +399,10 @@
 .latest-posts__elements__block__info__top {
   display: flex;
   justify-content: space-between;
+}
+.latest-posts__elements__block__info__title {
+  font-size: 22px;
+  margin: 25px 0 20px 0;
 }
 .most-popular__wrapper {
   display: flex;
@@ -457,6 +468,9 @@
   display: flex;
   justify-content: space-between;
 }
+.most-popular__elements__block__info__title {
+  font-size: 24px;
+}
 .most-popular__elements__button {
   display: flex;
   justify-content: center;
@@ -498,7 +512,24 @@
   letter-spacing: 0.1em;
   color: #000000;
 }
-.info__title__p + .info__title__svg {
+.info__title__link {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166.3%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+.info__title__link__hidden {
+  display: none;
+}
+.info__title__link:hover .info__title__link__hidden {
+  display: inline-flex;
+}
+.info__title__p + .info__title__link {
   margin-top: 20px;
 }
 @media (min-width: 1025px) {
@@ -579,6 +610,12 @@
   color: #000000;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .footer__contacts__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
 .footer__contacts__text {
   font-family: "Lato";
   font-style: normal;
@@ -591,6 +628,12 @@
 @media (max-width: 1024px) {
   .footer__contacts__text {
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer__contacts__text {
+    text-align: center;
+    font-size: 18px;
   }
 }
 .footer__contacts__text__element + .footer__contacts__text__element {
