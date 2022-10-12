@@ -1,49 +1,118 @@
-@font-face {
-  font-family: "Bebas Neue Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Regular"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue Regular.woff Regular.woff") format("woff");
+.body {
+  background-color: #9789F9;
 }
-@font-face {
-  font-family: "Bebas Neue Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Regular"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue.woff") format("woff");
+
+.main {
+  padding: 120px 0;
 }
-@font-face {
-  font-family: "Bebas Neue Book";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Book"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue Book.woff Book.woff") format("woff");
+.main__container {
+  margin: 0 120px;
 }
-@font-face {
-  font-family: "Bebas Neue Thin";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Thin"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue Thin.woff Thin.woff") format("woff");
+.main__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }
-@font-face {
-  font-family: "Bebas Neue Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Light"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue Light.woff Light.woff") format("woff");
+@media (max-width: 1024px) {
+  .main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-@font-face {
-  font-family: "Bebas Neue Bold";
+
+.card {
+  padding-top: 40px;
+  padding-bottom: 117px;
+  background-color: #F5F3F9;
+  background-image: url(../images/bg-image.png);
+  background-repeat: no-repeat;
+  background-position: 50% 164px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0px 0px 20px #8677EF);
+  transition: all 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+  }
+}
+.card__heading + .card__services {
+  margin-top: 70px;
+}
+.card:hover .card__button {
+  transform: translateY(-75px);
+  background-color: #FD8D7B;
+}
+.card:hover {
+  transform: scale(1.1);
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 0px 20px #8677EF);
+}
+.card__text {
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  opacity: 0;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: normal;
-  src: local("Bebas Neue Bold"), url("../fonts/bebas-neue-cufonfonts-webfont/BebasNeue Bold.woff Bold.woff") format("woff");
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #A9A9A9;
+}
+.card:hover .card__text {
+  opacity: 1;
+}
+.card__badge {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .card__badge {
+    display: none;
+  }
+}
+.card__badge__tooltip {
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  top: 15px;
+  left: 53px;
+}
+.card__badge:hover .card__badge__tooltip {
+  opacity: 1;
+}
+.card:hover .card__badge {
+  opacity: 1;
+}
+
+.heading__price {
+  max-width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .heading__top {
   display: flex;
 }
 .heading__top__1 {
+  align-self: flex-start;
   font-family: "Bebas Neue Thin";
   font-size: 24px;
   line-height: 28px;
   color: #181818;
 }
 .heading__top__2 {
+  align-self: flex-end;
   font-family: "Bebas Neue Thin";
   font-size: 60px;
   line-height: 60px;
@@ -52,11 +121,67 @@
   color: #000000;
 }
 .heading__top__3 {
-  font-family: "Bebas Neue";
+  align-self: flex-end;
+  font-family: "Bebas Neue Light";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.08em;
   color: #000000;
+}
+.heading__bottom {
+  margin-top: 24px;
+  font-family: "Bebas Neue Book";
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.services__icon {
+  display: flex;
+  justify-content: center;
+}
+.services__icon__svg {
+  width: 30px;
+  height: 30px;
+}
+.services__icon + .services__list {
+  margin-top: 40px;
+}
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.services__list__item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.button {
+  position: absolute;
+  bottom: -27px;
+  font-family: "Bebas Neue Regular";
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 16px 50px;
+  color: #FFFFFF;
+  background: #6FCFFB;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }

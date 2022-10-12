@@ -1,9 +1,17 @@
 .heading {
+
+    &__price {
+        max-width: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     &__top {
         display: flex;
 
         &__1 {
+            align-self: flex-start;
             font-family: 'Bebas Neue Thin';
             font-size: 24px;
             line-height: 28px;
@@ -11,6 +19,7 @@
             color: #181818;
         }
         &__2 {
+            align-self: flex-end;
             font-family: 'Bebas Neue Thin';
             font-size: 60px;
             line-height: 60px;
@@ -21,7 +30,8 @@
             color: #000000;           
         }
         &__3 {
-            font-family: 'Bebas Neue';
+            align-self: flex-end;
+            font-family: 'Bebas Neue Light';
             font-style: normal;
             font-weight: 300;
             font-size: 16px;
@@ -32,6 +42,13 @@
     }
     
     &__bottom {
+        margin-top: 24px;
+        font-family: 'Bebas Neue Book';
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #000000;
     }
 }
     

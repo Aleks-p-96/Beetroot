@@ -1,0 +1,19 @@
+.button {
+    position: absolute;
+    bottom: -27px;
+    font-family: 'Bebas Neue Regular';
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 16px 50px;
+    color: #FFFFFF;
+    background: $blue;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}

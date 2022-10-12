@@ -1,0 +1,17 @@
+.main {
+    padding: 120px 0;
+    &__container {
+        margin: 0 120px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        @media (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
