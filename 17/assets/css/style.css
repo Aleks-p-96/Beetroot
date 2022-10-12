@@ -112,6 +112,7 @@
   }
 }
 .header__menu__link {
+  position: relative;
   font-family: "Lato";
   font-weight: 400;
   font-size: 14px;
@@ -119,6 +120,18 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #000000;
+}
+.header__menu__link::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 10px;
+  bottom: -5px;
+  height: 1px;
+  transition: all 0.3s ease;
+}
+.header__menu__link:hover::after {
+  background-color: #000000;
 }
 .header__menu__link:active {
   text-decoration: underline;
@@ -486,6 +499,9 @@
   font-size: 16px;
   line-height: 166%;
   letter-spacing: 0.1em;
+}
+.most-popular__elements__button__css:hover {
+  background-color: #323232;
 }
 
 .info__wrapper {

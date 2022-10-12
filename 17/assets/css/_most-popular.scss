@@ -105,6 +105,9 @@
                 font-size: 16px;
                 line-height: 166%;
                 letter-spacing: 0.1em;
+                &:hover {
+                    background-color: #323232;
+                }
             }
         }
     }
