@@ -4,13 +4,22 @@
     background-color: $background-card;
     background-image: url(../images/bg-image.png);
     background-repeat: no-repeat;
-    // background-size: 100% auto;
     background-position: 50% 164px;
     max-width: 370px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(0px 0px 20px #8677EF);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-filter: drop-shadow(0px 0px 20px #8677EF);
+            filter: drop-shadow(0px 0px 20px #8677EF);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     @media (max-width:1024px) {
         width: 100%;
@@ -20,16 +29,23 @@
         margin-top: 70px;
     }
     &:hover &__button {
-        transform: translateY(-75px);
+        -webkit-transform: translateY(-75px);
+            -ms-transform: translateY(-75px);
+                transform: translateY(-75px);
         background-color: $red;
     }
     &:hover {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
         border: 1px solid #000000;
-        filter: drop-shadow(0px 0px 20px #8677EF);
+        -webkit-filter: drop-shadow(0px 0px 20px #8677EF);
+                filter: drop-shadow(0px 0px 20px #8677EF);
     }
 
     &__text {
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         position: absolute;
         bottom: 20px;
@@ -52,6 +68,8 @@
         position: absolute;
         top: 10px;
         right: 10px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         @media (max-width:1024px) {
             display: none;
