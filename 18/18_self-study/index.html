@@ -6,32 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 18_self_study</title>
     <link rel="stylesheet" href="../../zero.css">
+    <link rel="stylesheet" href="assets/fonts/bebas-neue-cufonfonts-webfont/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="body">
     <main class="main">
         <div class="main__container">
-            <div class="card">
-                <div class="card__heading heading">
-                    <div class="card__heading__price
-                                heading__price">
-                        <div class="card__heading__top
-                                    heading__top">
-                            <span class="heading__top__1" >$</span>
-                            <span class="heading__top__2" >29</span>
-                            <span class="heading__top__3" ></span>
-                        </div>
-                        <div class="card__heading__bottom
-                                    heading__bottom">
-                                    <h1 style="font-family:'Bebas Neue Regular';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    <h1 style="font-family:'Bebas Neue Regular';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    <h1 style="font-family:'Bebas Neue Book';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    <h1 style="font-family:'Bebas Neue Thin';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    <h1 style="font-family:'Bebas Neue Light';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    <h1 style="font-family:'Bebas Neue Bold';font-weight:normal;font-size:42px">AaBbCcDdEeFfGgHhŞşIıİi Example</h1>
-                                    
+            <div class="main__wrapper">
+                <div class="card card__z1">
+                    <div class="card__heading heading">
+                        <div class="card__heading__price
+                                    heading__price">
+                            <div class="card__heading__top
+                                        heading__top">
+                                <span class="heading__top__1" >$</span>
+                                <span class="heading__top__2" >29</span>
+                                <span class="heading__top__3" >/HR</span>
+                            </div>
+                            <p class="card__heading__bottom
+                                        heading__bottom">
+                                UI & Ux
+                            </p>
                         </div>
                     </div>
+                    <div class="card__services services">
+                        <div class="services__icon">
+                            <svg class="services__icon__svg" >
+                                <use xlink:href="assets/images/sprite.svg#palette"></use>
+                            </svg>
+                        </div>
+                        <ul class="services__list">
+                            <li class="services__list__item">
+                                Brand Idea
+                            </li>
+                            <li class="services__list__item">
+                                Logo Inovation
+                            </li>
+                            <li class="services__list__item">
+                                Structure of Design
+                            </li>
+                            <li class="services__list__item">
+                                Quality of Design
+                            </li>
+                            <li class="services__list__item">
+                                User friendly
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card__button button">
+                        Place an order
+                    </a>
+                    <p class="card__text">Order now &  get 15% Discount</p>
+                    <a href="#" class="card__badge">
+                        <svg width="68" height="54" viewBox="0 0 68 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="30" r="24" fill="#FD8D7B"/>
+                            <path d="M54.8421 4C58.6211 4 61.6842 6.91 61.6842 10.5C61.6842 14.09 58.6211 17 54.8421 17C51.0632 17 48 14.09 48 10.5C48 6.91 51.0632 4 54.8421 4ZM65.8947 0C67.0526 0 68 0.9 68 2C68 3.1 67.0526 4 65.8947 4C64.7368 4 63.7895 3.1 63.7895 2C63.7895 0.9 64.7368 0 65.8947 0Z" fill="#FD8D7B"/>
+                            <path d="M20.9609 39V22.1953H24.4414C25.6836 22.1953 26.5938 22.5547 27.1719 23.2734C27.75 23.9922 28.0391 24.9961 28.0391 26.2852V28.1016C28.0391 29.4375 27.7188 30.4375 27.0781 31.1016C26.4453 31.7578 25.4688 32.0859 24.1484 32.0859H22.0625V39H20.9609ZM22.0625 31.0781H24.1484C25.125 31.0781 25.832 30.8477 26.2695 30.3867C26.7148 29.9258 26.9375 29.1875 26.9375 28.1719V26.2031C26.9375 25.2344 26.7461 24.4922 26.3633 23.9766C25.9805 23.4609 25.3398 23.2031 24.4414 23.2031H22.0625V31.0781Z" fill="white"/>
+                        </svg>
+                        <svg class="card__badge__tooltip" width="101" height="30" viewBox="0 0 101 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0H86C94.28 0 101 6.72 101 15C101 23.28 94.28 30 86 30H19C10.72 30 4 23.28 4 15C4 6.72 10.72 0 19 0ZM0 15L6 8V22L0 15Z" fill="#3B4040"/>
+                            <path d="M31.0559 8.8V20H31.7919V15.392H33.1839C34.9599 15.392 35.7759 14.512 35.7759 12.736V11.52C35.7759 9.888 35.1039 8.8 33.3759 8.8H31.0559ZM31.7919 14.72V9.472H33.3759C34.6239 9.472 35.0399 10.256 35.0399 11.472V12.784C35.0399 14.144 34.4799 14.72 33.1839 14.72H31.7919ZM37.5073 17.264C37.5073 18.896 38.2593 20.096 39.9553 20.096C41.6833 20.096 42.4353 18.896 42.4353 17.264V11.536C42.4353 9.904 41.6833 8.704 39.9553 8.704C38.2593 8.704 37.5073 9.904 37.5073 11.536V17.264ZM38.2433 11.488C38.2433 10.272 38.7233 9.376 39.9553 9.376C41.2033 9.376 41.6993 10.272 41.6993 11.488V17.312C41.6993 18.528 41.2033 19.424 39.9553 19.424C38.7233 19.424 38.2433 18.528 38.2433 17.312V11.488ZM44.2891 8.8V20H45.0251V15.392H46.4171C48.1931 15.392 49.0091 14.512 49.0091 12.736V11.52C49.0091 9.888 48.3371 8.8 46.6091 8.8H44.2891ZM45.0251 14.72V9.472H46.6091C47.8571 9.472 48.2731 10.256 48.2731 11.472V12.784C48.2731 14.144 47.7131 14.72 46.4171 14.72H45.0251ZM51.4924 8.8H50.7564V17.264C50.7564 18.864 51.4444 20.096 53.1564 20.096C54.8684 20.096 55.5404 18.864 55.5404 17.264V8.8H54.8524V17.296C54.8524 18.496 54.4044 19.424 53.1724 19.424C51.9404 19.424 51.4924 18.496 51.4924 17.296V8.8ZM61.7001 20V19.328H58.1801V8.8H57.4441V20H61.7001ZM68.0034 17.52L68.5634 20H69.2994L66.8034 8.784H65.7314L63.2834 20H63.9554L64.5154 17.52H68.0034ZM66.2434 9.632L67.8914 16.88H64.6274L66.2434 9.632ZM71.0522 8.8V20H71.7882V14.992H72.9562C74.2362 14.992 75.0522 15.408 75.0522 16.896V18.656C75.0522 19.264 75.1002 19.664 75.2922 20H76.0602C75.8202 19.632 75.7882 19.12 75.7882 18.656V16.912C75.7882 15.696 75.3242 14.88 74.1722 14.624C75.2762 14.368 75.7882 13.616 75.7882 12.304V11.328C75.7882 9.744 75.1002 8.8 73.3882 8.8H71.0522ZM71.7882 14.32V9.472H73.3722C74.5882 9.472 75.0522 10.192 75.0522 11.392V12.448C75.0522 13.952 74.2842 14.32 72.9722 14.32H71.7882Z" fill="white"/>
+                        </svg>                           
+                    </a>
+                </div>
+                <div class="card card__z2">
+                    <div class="card__heading heading">
+                        <div class="card__heading__price
+                                    heading__price">
+                            <div class="card__heading__top
+                                        heading__top">
+                                <span class="heading__top__1" >$</span>
+                                <span class="heading__top__2" >29</span>
+                                <span class="heading__top__3" >/HR</span>
+                            </div>
+                            <p class="card__heading__bottom
+                                        heading__bottom">
+                                UI & Ux
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card__services services">
+                        <div class="services__icon">
+                            <svg class="services__icon__svg" >
+                                <use xlink:href="assets/images/sprite.svg#palette"></use>
+                            </svg>
+                        </div>
+                        <ul class="services__list">
+                            <li class="services__list__item">
+                                Brand Idea
+                            </li>
+                            <li class="services__list__item">
+                                Logo Inovation
+                            </li>
+                            <li class="services__list__item">
+                                Structure of Design
+                            </li>
+                            <li class="services__list__item">
+                                Quality of Design
+                            </li>
+                            <li class="services__list__item">
+                                User friendly
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card__button button">
+                        Place an order
+                    </a>
+                    <p class="card__text">Order now &  get 15% Discount</p>
+                    <a href="#" class="card__badge">
+                        <svg width="68" height="54" viewBox="0 0 68 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="30" r="24" fill="#FD8D7B"/>
+                            <path d="M54.8421 4C58.6211 4 61.6842 6.91 61.6842 10.5C61.6842 14.09 58.6211 17 54.8421 17C51.0632 17 48 14.09 48 10.5C48 6.91 51.0632 4 54.8421 4ZM65.8947 0C67.0526 0 68 0.9 68 2C68 3.1 67.0526 4 65.8947 4C64.7368 4 63.7895 3.1 63.7895 2C63.7895 0.9 64.7368 0 65.8947 0Z" fill="#FD8D7B"/>
+                            <path d="M20.9609 39V22.1953H24.4414C25.6836 22.1953 26.5938 22.5547 27.1719 23.2734C27.75 23.9922 28.0391 24.9961 28.0391 26.2852V28.1016C28.0391 29.4375 27.7188 30.4375 27.0781 31.1016C26.4453 31.7578 25.4688 32.0859 24.1484 32.0859H22.0625V39H20.9609ZM22.0625 31.0781H24.1484C25.125 31.0781 25.832 30.8477 26.2695 30.3867C26.7148 29.9258 26.9375 29.1875 26.9375 28.1719V26.2031C26.9375 25.2344 26.7461 24.4922 26.3633 23.9766C25.9805 23.4609 25.3398 23.2031 24.4414 23.2031H22.0625V31.0781Z" fill="white"/>
+                        </svg>
+                        <svg class="card__badge__tooltip" width="101" height="30" viewBox="0 0 101 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0H86C94.28 0 101 6.72 101 15C101 23.28 94.28 30 86 30H19C10.72 30 4 23.28 4 15C4 6.72 10.72 0 19 0ZM0 15L6 8V22L0 15Z" fill="#3B4040"/>
+                            <path d="M31.0559 8.8V20H31.7919V15.392H33.1839C34.9599 15.392 35.7759 14.512 35.7759 12.736V11.52C35.7759 9.888 35.1039 8.8 33.3759 8.8H31.0559ZM31.7919 14.72V9.472H33.3759C34.6239 9.472 35.0399 10.256 35.0399 11.472V12.784C35.0399 14.144 34.4799 14.72 33.1839 14.72H31.7919ZM37.5073 17.264C37.5073 18.896 38.2593 20.096 39.9553 20.096C41.6833 20.096 42.4353 18.896 42.4353 17.264V11.536C42.4353 9.904 41.6833 8.704 39.9553 8.704C38.2593 8.704 37.5073 9.904 37.5073 11.536V17.264ZM38.2433 11.488C38.2433 10.272 38.7233 9.376 39.9553 9.376C41.2033 9.376 41.6993 10.272 41.6993 11.488V17.312C41.6993 18.528 41.2033 19.424 39.9553 19.424C38.7233 19.424 38.2433 18.528 38.2433 17.312V11.488ZM44.2891 8.8V20H45.0251V15.392H46.4171C48.1931 15.392 49.0091 14.512 49.0091 12.736V11.52C49.0091 9.888 48.3371 8.8 46.6091 8.8H44.2891ZM45.0251 14.72V9.472H46.6091C47.8571 9.472 48.2731 10.256 48.2731 11.472V12.784C48.2731 14.144 47.7131 14.72 46.4171 14.72H45.0251ZM51.4924 8.8H50.7564V17.264C50.7564 18.864 51.4444 20.096 53.1564 20.096C54.8684 20.096 55.5404 18.864 55.5404 17.264V8.8H54.8524V17.296C54.8524 18.496 54.4044 19.424 53.1724 19.424C51.9404 19.424 51.4924 18.496 51.4924 17.296V8.8ZM61.7001 20V19.328H58.1801V8.8H57.4441V20H61.7001ZM68.0034 17.52L68.5634 20H69.2994L66.8034 8.784H65.7314L63.2834 20H63.9554L64.5154 17.52H68.0034ZM66.2434 9.632L67.8914 16.88H64.6274L66.2434 9.632ZM71.0522 8.8V20H71.7882V14.992H72.9562C74.2362 14.992 75.0522 15.408 75.0522 16.896V18.656C75.0522 19.264 75.1002 19.664 75.2922 20H76.0602C75.8202 19.632 75.7882 19.12 75.7882 18.656V16.912C75.7882 15.696 75.3242 14.88 74.1722 14.624C75.2762 14.368 75.7882 13.616 75.7882 12.304V11.328C75.7882 9.744 75.1002 8.8 73.3882 8.8H71.0522ZM71.7882 14.32V9.472H73.3722C74.5882 9.472 75.0522 10.192 75.0522 11.392V12.448C75.0522 13.952 74.2842 14.32 72.9722 14.32H71.7882Z" fill="white"/>
+                        </svg>                           
+                    </a>
+                </div>
+                <div class="card card__z3">
+                    <div class="card__heading heading">
+                        <div class="card__heading__price
+                                    heading__price">
+                            <div class="card__heading__top
+                                        heading__top">
+                                <span class="heading__top__1" >$</span>
+                                <span class="heading__top__2" >29</span>
+                                <span class="heading__top__3" >/HR</span>
+                            </div>
+                            <p class="card__heading__bottom
+                                        heading__bottom">
+                                UI & Ux
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card__services services">
+                        <div class="services__icon">
+                            <svg class="services__icon__svg" >
+                                <use xlink:href="assets/images/sprite.svg#palette"></use>
+                            </svg>
+                        </div>
+                        <ul class="services__list">
+                            <li class="services__list__item">
+                                Brand Idea
+                            </li>
+                            <li class="services__list__item">
+                                Logo Inovation
+                            </li>
+                            <li class="services__list__item">
+                                Structure of Design
+                            </li>
+                            <li class="services__list__item">
+                                Quality of Design
+                            </li>
+                            <li class="services__list__item">
+                                User friendly
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card__button button">
+                        Place an order
+                    </a>
+                    <p class="card__text">Order now &  get 15% Discount</p>
+                    <a href="#" class="card__badge">
+                        <svg width="68" height="54" viewBox="0 0 68 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="30" r="24" fill="#FD8D7B"/>
+                            <path d="M54.8421 4C58.6211 4 61.6842 6.91 61.6842 10.5C61.6842 14.09 58.6211 17 54.8421 17C51.0632 17 48 14.09 48 10.5C48 6.91 51.0632 4 54.8421 4ZM65.8947 0C67.0526 0 68 0.9 68 2C68 3.1 67.0526 4 65.8947 4C64.7368 4 63.7895 3.1 63.7895 2C63.7895 0.9 64.7368 0 65.8947 0Z" fill="#FD8D7B"/>
+                            <path d="M20.9609 39V22.1953H24.4414C25.6836 22.1953 26.5938 22.5547 27.1719 23.2734C27.75 23.9922 28.0391 24.9961 28.0391 26.2852V28.1016C28.0391 29.4375 27.7188 30.4375 27.0781 31.1016C26.4453 31.7578 25.4688 32.0859 24.1484 32.0859H22.0625V39H20.9609ZM22.0625 31.0781H24.1484C25.125 31.0781 25.832 30.8477 26.2695 30.3867C26.7148 29.9258 26.9375 29.1875 26.9375 28.1719V26.2031C26.9375 25.2344 26.7461 24.4922 26.3633 23.9766C25.9805 23.4609 25.3398 23.2031 24.4414 23.2031H22.0625V31.0781Z" fill="white"/>
+                        </svg>
+                        <svg class="card__badge__tooltip" width="101" height="30" viewBox="0 0 101 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0H86C94.28 0 101 6.72 101 15C101 23.28 94.28 30 86 30H19C10.72 30 4 23.28 4 15C4 6.72 10.72 0 19 0ZM0 15L6 8V22L0 15Z" fill="#3B4040"/>
+                            <path d="M31.0559 8.8V20H31.7919V15.392H33.1839C34.9599 15.392 35.7759 14.512 35.7759 12.736V11.52C35.7759 9.888 35.1039 8.8 33.3759 8.8H31.0559ZM31.7919 14.72V9.472H33.3759C34.6239 9.472 35.0399 10.256 35.0399 11.472V12.784C35.0399 14.144 34.4799 14.72 33.1839 14.72H31.7919ZM37.5073 17.264C37.5073 18.896 38.2593 20.096 39.9553 20.096C41.6833 20.096 42.4353 18.896 42.4353 17.264V11.536C42.4353 9.904 41.6833 8.704 39.9553 8.704C38.2593 8.704 37.5073 9.904 37.5073 11.536V17.264ZM38.2433 11.488C38.2433 10.272 38.7233 9.376 39.9553 9.376C41.2033 9.376 41.6993 10.272 41.6993 11.488V17.312C41.6993 18.528 41.2033 19.424 39.9553 19.424C38.7233 19.424 38.2433 18.528 38.2433 17.312V11.488ZM44.2891 8.8V20H45.0251V15.392H46.4171C48.1931 15.392 49.0091 14.512 49.0091 12.736V11.52C49.0091 9.888 48.3371 8.8 46.6091 8.8H44.2891ZM45.0251 14.72V9.472H46.6091C47.8571 9.472 48.2731 10.256 48.2731 11.472V12.784C48.2731 14.144 47.7131 14.72 46.4171 14.72H45.0251ZM51.4924 8.8H50.7564V17.264C50.7564 18.864 51.4444 20.096 53.1564 20.096C54.8684 20.096 55.5404 18.864 55.5404 17.264V8.8H54.8524V17.296C54.8524 18.496 54.4044 19.424 53.1724 19.424C51.9404 19.424 51.4924 18.496 51.4924 17.296V8.8ZM61.7001 20V19.328H58.1801V8.8H57.4441V20H61.7001ZM68.0034 17.52L68.5634 20H69.2994L66.8034 8.784H65.7314L63.2834 20H63.9554L64.5154 17.52H68.0034ZM66.2434 9.632L67.8914 16.88H64.6274L66.2434 9.632ZM71.0522 8.8V20H71.7882V14.992H72.9562C74.2362 14.992 75.0522 15.408 75.0522 16.896V18.656C75.0522 19.264 75.1002 19.664 75.2922 20H76.0602C75.8202 19.632 75.7882 19.12 75.7882 18.656V16.912C75.7882 15.696 75.3242 14.88 74.1722 14.624C75.2762 14.368 75.7882 13.616 75.7882 12.304V11.328C75.7882 9.744 75.1002 8.8 73.3882 8.8H71.0522ZM71.7882 14.32V9.472H73.3722C74.5882 9.472 75.0522 10.192 75.0522 11.392V12.448C75.0522 13.952 74.2842 14.32 72.9722 14.32H71.7882Z" fill="white"/>
+                        </svg>                           
+                    </a>
                 </div>
             </div>
         </div>
