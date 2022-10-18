@@ -62,6 +62,13 @@
   color: #969696;
 }
 .form__input, .form__select {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #545454;
   display: block;
   padding: 8px 10px;
   height: 38px;
@@ -104,6 +111,15 @@
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
+}
+.form__radio-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #545454;
 }
 .form__radio-input {
   display: none;
@@ -203,4 +219,61 @@
 .form__bottom-text__link {
   font-weight: 500;
   color: #007BFF;
+}
+.form__profile-block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.form__profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.form__profile-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.form__profile-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+}
+.form__profile-button::after {
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  content: url("data:image/svg+xml;charset=UTF-8,<svg width='10' height='12' viewBox='0 0 10 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.00001 10.6667C1.00001 11.4 1.60001 12 2.33334 12H7.66668C8.40001 12 9.00001 11.4 9.00001 10.6667V2.66667H1.00001V10.6667V10.6667ZM9.66668 0.666667H7.33334L6.66668 0H3.33334L2.66668 0.666667H0.333344V2H9.66668V0.666667V0.666667Z' fill='%23969696'/></svg>");
+}
+.form__profile-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+.form__input-container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.form__input-container:before {
+  position: absolute;
+  right: 9px;
+  content: url("data:image/svg+xml;charset=UTF-8,<svg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M3.78001 1.33333L5.00001 0H9.00001L10.22 1.33333H12.3333C13.0667 1.33333 13.6667 1.93333 13.6667 2.66667V10.6667C13.6667 11.4 13.0667 12 12.3333 12H1.66668C0.933344 12 0.333344 11.4 0.333344 10.6667V2.66667C0.333344 1.93333 0.933344 1.33333 1.66668 1.33333H3.78001ZM3.66668 6.66667C3.66668 8.50667 5.16001 10 7.00001 10C8.84001 10 10.3333 8.50667 10.3333 6.66667C10.3333 4.82667 8.84001 3.33333 7.00001 3.33333C5.16001 3.33333 3.66668 4.82667 3.66668 6.66667ZM7.00001 8.8C8.17822 8.8 9.13334 7.84487 9.13334 6.66667C9.13334 5.48846 8.17822 4.53333 7.00001 4.53333C5.8218 4.53333 4.86668 5.48846 4.86668 6.66667C4.86668 7.84487 5.8218 8.8 7.00001 8.8Z' fill='%23969696'/></svg>");
+}
+.form__profile-input {
+  display: inline-block;
+  height: 30px;
 }

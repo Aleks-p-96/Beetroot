@@ -26,3 +26,13 @@
     letter-spacing: -0.1px;
     color: $text-color2;
 }
+
+@mixin input-font {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: $text-color;
+}
