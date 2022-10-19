@@ -1,0 +1,71 @@
+.steps {
+    background: $gray20;
+    padding: 107px 0 59px 0;
+
+    @include tablet-size {
+        padding: 60px 0;
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        @include tablet-size {
+            flex-direction: column;
+            // justify-content: flex-start;
+            gap: 60px;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        top: -50px;
+        left: 200px;
+        right: 200px;
+        @include tablet-size {
+            display: none;
+        }
+        // width: 100%;
+        
+        &__svg{
+            width: 100%;
+        }
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon {
+        display: inline-flex;
+        background: $gray20;
+        border-radius: 48px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+
+        &__svg {
+            fill: $blue;
+            width: 64px;
+            height: 64px;
+        }
+    
+    &:hover &__svg {
+        fill: $red;
+    }
+
+    }
+
+
+    &__description {
+        @include font-h2;
+    }
+}

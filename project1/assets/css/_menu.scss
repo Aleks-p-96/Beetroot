@@ -1,0 +1,19 @@
+
+.menu {
+    
+    &__list {
+        display: flex;
+        gap: 40px;
+        align-items: center;       
+    }
+    
+    &__item {
+        display: flex;
+        align-items:center
+    }
+    
+    &__link {
+        @include font-nav;
+    }
+}
+    

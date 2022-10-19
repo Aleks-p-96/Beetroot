@@ -1,0 +1,26 @@
+.navigation {
+    padding: 32px 0;
+
+    background: $blue;
+
+    &__container {
+        @include container;
+    }
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet-size {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+    
+    &__logo {
+        @include font-nav-title;
+    }
+    
+}
+    

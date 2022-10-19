@@ -1,0 +1,99 @@
+
+@mixin font ($font-family:$aleo, $font-weight:400, $font-size:14px, $line-heigth:20px, $color:$white) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-heigth;
+    color: $color;
+}
+
+@mixin font-header-title {
+    @include font ($josefin, 700, 48px, 52px, $white);
+    text-transform: uppercase;
+}
+
+@mixin font-header-subtitle {
+    @include font ($josefin, 400, 22px, 28px, $white);
+    letter-spacing: 0.31em;
+}
+
+@mixin font-nav-title {
+    @include font ($josefin, 700, 24px, 28px, $white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@mixin font-nav {
+    @include font ($aleo, 500, 14px, 20px, $white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@mixin font-h2 {
+    @include font ($aleo, 400, 36px, 40px, $white);
+    text-transform: capitalize;
+}
+
+@mixin font-regular {
+    @include font ($josefin, 300, 16px, 28px, $white);
+    letter-spacing: 0.1em;
+}
+
+@mixin font-button {
+    @include font ($aleo, 400, 16px, 20px, $white);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+@mixin font-input {
+    @include font ($josefin, 400, 14px, 20px, $gray);
+    letter-spacing: 0.2em;
+}
+
+@mixin font-search-button {
+    @include font ($aleo, 400, 14px, 20px, $white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@mixin font-h3 {
+    @include font ($josefin, 400, 20px, 28px, $white);
+    text-transform: uppercase;
+}
+
+@mixin font-spain{
+    @include font ($josefin, 300, 20px, 28px, $white);
+    letter-spacing: 0.1em;
+}
+
+@mixin font-footer{
+    @include font ($josefin, 400, 14px, 20px, $white);
+    letter-spacing: 0.2em;
+}
+
+@mixin mobile-size {
+    @media (max-width: ($tablet - 1px)) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @media (max-width: ($tablet-big - 1px)) {
+        @content;
+    }
+}
+
+@mixin desktop-size {
+    @media (max-width: ($desktop - 1px)) {
+        @content;
+    }
+}
+
+@mixin container {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    @include desktop-size {
+        margin: 0 3%;
+    }
+}

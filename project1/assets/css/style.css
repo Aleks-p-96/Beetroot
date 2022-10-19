@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Roboto:wght@400;500&display=swap");
+.button {
+  display: inline-block;
+  background-color: #5373FD;
+  color: #FFFFFF;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.header {
+  position: relative;
+  padding: 295px 0 371px 0;
+  background: url(../images/header/HeaderBackground.webp) 50% 0/cover no-repeat;
+}
+.header__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .header__container {
+    margin: 0 3%;
+  }
+}
+.header__title {
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header__title + .header__subtitle {
+  margin: 8px 0 48px 0;
+}
+.header__subtitle {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.31em;
+  text-align: center;
+}
+.header__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__form__wrapper {
+  width: 100%;
+  max-width: 647px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__input {
+  padding: 20px 150px 20px 36px;
+  height: 60px;
+  width: 100%;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+  letter-spacing: 0.2em;
+}
+.header__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 5px;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  line-height: 0px;
+  height: 52px;
+  background-color: #5373FD;
+  padding: 16px 24px 16px 52px;
+}
+.header__button:before {
+  position: absolute;
+  left: 24px;
+  width: 18px;
+  height: 18px;
+  content: url("data:image/svg+xml;charset=UTF-8,<svg width='16' height='16' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M63.1296 55.3321L50.6662 42.8708C50.1037 42.3084 49.3411 41.9959 48.541 41.9959H46.5034C49.9537 37.5838 52.0038 32.0344 52.0038 25.9975C52.0038 11.6364 40.3655 0 26.0019 0C11.6384 0 0 11.6364 0 25.9975C0 40.3586 11.6384 51.9949 26.0019 51.9949C32.0398 51.9949 37.5903 49.9451 42.0031 46.4955V48.5328C42.0031 49.3327 42.3156 50.0951 42.8781 50.6576L55.3416 63.1188C56.5166 64.2937 58.4168 64.2937 59.5794 63.1188L63.1171 59.5817C64.2922 58.4068 64.2922 56.507 63.1296 55.3321ZM26.0019 41.9959C17.1638 41.9959 10.0007 34.8466 10.0007 25.9975C10.0007 17.1608 17.1513 9.99902 26.0019 9.99902C34.84 9.99902 42.0031 17.1483 42.0031 25.9975C42.0031 34.8341 34.8526 41.9959 26.0019 41.9959Z' fill='white'/></svg>");
+}
+
+.navigation {
+  padding: 32px 0;
+  background: #5373FD;
+}
+.navigation__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .navigation__container {
+    margin: 0 3%;
+  }
+}
+.navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  .navigation__wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.navigation__logo {
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menu__list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+}
+.menu__link {
+  font-family: "Aleo";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.why-choose {
+  position: relative;
+  padding: 124px 0;
+  background: url(../images/why-choose/WhyBackground.webp) 50% 0/cover no-repeat;
+}
+@media (max-width: 1023px) {
+  .why-choose {
+    padding: 60px 0;
+  }
+}
+.why-choose__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .why-choose__container {
+    margin: 0 3%;
+  }
+}
+.why-choose__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+@media (max-width: 1023px) {
+  .why-choose__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .why-choose__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 37px;
+  }
+}
+.why-choose__title {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.why-choose__title + .why-choose__text {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .why-choose__title + .why-choose__text {
+    margin-top: 19px;
+  }
+}
+.why-choose__text {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  max-width: 558px;
+}
+@media (max-width: 1023px) {
+  .why-choose__text {
+    max-width: none;
+    text-align: center;
+  }
+}
+.why-choose__text + .why-choose__text {
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1023px) {
+  .why-choose__text + .why-choose__text {
+    margin-bottom: 24px;
+  }
+}
+.why-choose__button {
+  padding: 20px 32px;
+}
+@media (max-width: 1023px) {
+  .why-choose__text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.why-choose__images-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 auto;
+}
+@media (max-width: 1023px) {
+  .why-choose__images-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+.why-choose__image-row {
+  display: flex;
+  max-width: 461px;
+}
+.why-choose__image-row--left {
+  justify-content: flex-start;
+}
+.why-choose__image-row--right {
+  justify-content: flex-end;
+}
+@media (max-width: 1023px) {
+  .why-choose__image {
+    width: 100%;
+    max-height: 219px;
+  }
+}
+
+.steps {
+  background: #333333;
+  padding: 107px 0 59px 0;
+}
+@media (max-width: 1023px) {
+  .steps {
+    padding: 60px 0;
+  }
+}
+.steps__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .steps__container {
+    margin: 0 3%;
+  }
+}
+.steps__wrapper {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .steps__wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+.steps__line {
+  position: absolute;
+  top: -50px;
+  left: 200px;
+  right: 200px;
+}
+@media (max-width: 1023px) {
+  .steps__line {
+    display: none;
+  }
+}
+.steps__line__svg {
+  width: 100%;
+}
+.steps__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steps__icon {
+  display: inline-flex;
+  background: #333333;
+  border-radius: 48px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+}
+.steps__icon__svg {
+  fill: #5373FD;
+  width: 64px;
+  height: 64px;
+}
+.steps__icon:hover .steps__icon__svg {
+  fill: #FF6363;
+}
+.steps__description {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.book-now {
+  padding: 220px 0 120px 0;
+  background: url(../images/book-now-1/Book-1Background.webp) 50% 0/cover no-repeat;
+}
+.book-now--2 {
+  background: url(../images/book-now-2/Book-2Background.webp) 50% 0/cover no-repeat;
+}
+.book-now__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .book-now__container {
+    margin: 0 3%;
+  }
+}
+.book-now__wrapper {
+  display: flex;
+}
+.book-now__wrapper--flex-end {
+  justify-content: flex-end;
+}
+.book-now__subtitle {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+}
+.book-now__subtitle + .book-now__title {
+  margin: 16px 0;
+}
+.book-now__title {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.book-now__description {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+}
+.book-now__description + .book-now__button {
+  margin-top: 24px;
+}
+@media (max-width: 1023px) {
+  .book-now__description + .book-now__button {
+    margin-top: 28px;
+  }
+}
+.book-now__button {
+  padding: 20px 56px;
+}
+.book-now__card {
+  width: 50%;
+  padding: 44px 32px;
+  background: rgba(35, 35, 35, 0.9);
+}
+@media (max-width: 1023px) {
+  .book-now__card {
+    width: 100%;
+  }
+}
+
+.what-say {
+  padding: 120px 0 180px 0;
+  background: url(../images/what-say/WhatBackground.webp) 50% 0/cover no-repeat;
+}
+.what-say__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .what-say__container {
+    margin: 0 3%;
+  }
+}
+.what-say__title {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  text-align: center;
+}
+.what-say__title + .what-say__card {
+  margin-top: 60px;
+}
+.what-say__card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+@media (max-width: 1023px) {
+  .what-say__card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1023px) {
+  .what-say__image-container {
+    max-height: 336px;
+  }
+}
+.what-say__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.what-say__text-container {
+  padding: 48px 60px;
+  background-color: #333333;
+}
+.what-say__card-title {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.what-say__card-title + .what-say__card-text {
+  margin-top: 16px;
+}
+.what-say__card-text {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+}
+.what-say__card-text::before {
+  position: relative;
+  top: -3px;
+  margin-right: 3px;
+  content: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M18.125 10H15V7.5C15 6.12109 16.1211 5 17.5 5H17.8125C18.332 5 18.75 4.58203 18.75 4.0625V2.1875C18.75 1.66797 18.332 1.25 17.8125 1.25H17.5C14.0469 1.25 11.25 4.04688 11.25 7.5V16.875C11.25 17.9102 12.0898 18.75 13.125 18.75H18.125C19.1602 18.75 20 17.9102 20 16.875V11.875C20 10.8398 19.1602 10 18.125 10ZM6.875 10H3.75V7.5C3.75 6.12109 4.87109 5 6.25 5H6.5625C7.08203 5 7.5 4.58203 7.5 4.0625V2.1875C7.5 1.66797 7.08203 1.25 6.5625 1.25H6.25C2.79688 1.25 0 4.04688 0 7.5V16.875C0 17.9102 0.839844 18.75 1.875 18.75H6.875C7.91016 18.75 8.75 17.9102 8.75 16.875V11.875C8.75 10.8398 7.91016 10 6.875 10Z' fill='%235373FD'/></svg>");
+}
+
+.footer {
+  padding: 80px 0;
+  background-color: #000000;
+}
+.footer__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 1359px) {
+  .footer__container {
+    margin: 0 3%;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__title {
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.footer__title + .footer__subtitle {
+  margin: 8px 0 20px 0;
+}
+.footer__subtitle {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  letter-spacing: 0.2em;
+}
+.footer__socials-wrapper {
+  display: flex;
+  gap: 32px;
+}
+.footer__socials-element {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__socials-element__svg {
+  height: 32px;
+  fill: #FFFFFF;
+}
+.footer__socials-element:hover .footer__socials-element__svg {
+  fill: #5373FD;
+}

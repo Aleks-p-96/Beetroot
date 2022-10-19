@@ -1,0 +1,60 @@
+.book-now {
+    padding: 220px 0 120px 0;
+    background: url(../images/book-now-1/Book-1Background.webp) 50% 0/cover  no-repeat;
+
+    &--2 {
+    background: url(../images/book-now-2/Book-2Background.webp) 50% 0/cover  no-repeat;
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__wrapper {
+        display: flex;
+
+        &--flex-end {
+            justify-content: flex-end
+        }
+    }
+
+    &__subtitle {
+        @include font-spain;
+    }
+
+    &__subtitle + &__title {
+        margin: 16px 0;
+    }
+    
+    &__title {
+        @include font-h3;
+    }
+    
+    &__description {
+        @include font-regular;
+    }
+
+    &__description + &__button {
+        margin-top: 24px;
+
+        @include tablet-size {
+            margin-top: 28px;
+        }
+    }
+    
+    &__button {
+        padding: 20px 56px;
+    }
+
+    &__card {
+        width: 50%;
+        padding: 44px 32px;
+        background: rgba(35, 35, 35, 0.9);
+
+        @include tablet-size {
+            width: 100%;
+        }
+    }
+}
+    
+
