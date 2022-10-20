@@ -11,9 +11,17 @@
     }
 
     &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
+        display: flex;
+        align-items: center;
+        gap: 136px;
+
+        @include desktop-size {
+            justify-content: space-between;
+            }
+
+        @include size(1200px) {
+            gap: 24px;
+        }
 
         @include tablet-size {
             display: flex;
@@ -42,7 +50,6 @@
 
     &__text {
         @include font-regular;
-        max-width: 558px;
 
         @include tablet-size  {
             max-width: none;
@@ -64,6 +71,13 @@
     }
 
     &__text-block {
+        max-width: 648px;
+
+        @include desktop-size {
+        max-width: 558px;
+
+        }
+
         @include tablet-size {
             display: flex;
             flex-direction: column;
@@ -72,13 +86,23 @@
     }
 
     &__images-block {
+        width: 424px;
         display: flex;
         flex-direction: column;
         gap: 16px;
         flex: 0 0 auto;
 
+        @include desktop-size {
+            width: 461px;
+            }
+
+        @include size(1200px) {
+            width: 386px;
+        }
+
         @include tablet-size {
             display: grid;
+            width: 100%;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
         }
@@ -101,7 +125,7 @@
         @include tablet-size {
             width: 100%;
             max-height: 219px;
-
+            object-fit: cover;
         }
     }
 

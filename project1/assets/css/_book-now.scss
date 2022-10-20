@@ -2,6 +2,10 @@
     padding: 220px 0 120px 0;
     background: url(../images/book-now-1/Book-1Background.webp) 50% 0/cover  no-repeat;
 
+    @include tablet-size {
+        padding: 120px 0 120px 0;
+    }
+
     &--2 {
     background: url(../images/book-now-2/Book-2Background.webp) 50% 0/cover  no-repeat;
     }

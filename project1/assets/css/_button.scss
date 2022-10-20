@@ -1,6 +1,28 @@
 .button {
+    position: relative;
     display: inline-block;
     background-color: $blue;
     color: $white;
+    z-index: 1;
+    transition: scale .2s linear;
     @include font-button;
+
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 60px;
+        content: url("data:image/svg+xml;charset=UTF-8,<svg width='109' height='60' viewBox='0 0 109 60' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0H52L109 60H0V0Z' fill='%23486BFE'/></svg>");
+    }
+
+    &:hover {
+        scale: 1.05;
+    }
+
+    &:active {
+        border: 2px solid $gray20;
+    }
 }
+
+

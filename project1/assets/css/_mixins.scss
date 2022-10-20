@@ -1,4 +1,5 @@
 
+
 @mixin font ($font-family:$aleo, $font-weight:400, $font-size:14px, $line-heigth:20px, $color:$white) {
     font-family: $font-family;
     font-weight: $font-weight;
@@ -18,7 +19,7 @@
 }
 
 @mixin font-nav-title {
-    @include font ($josefin, 700, 24px, 28px, $white);
+    @include font ($josefin, 700, 24px, 20px, $white);
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
@@ -84,7 +85,13 @@
 }
 
 @mixin desktop-size {
-    @media (max-width: ($desktop - 1px)) {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin size ($size) {
+    @media (max-width: $size) {
         @content;
     }
 }
@@ -94,6 +101,11 @@
     margin: 0 auto;
 
     @include desktop-size {
+        max-width: 1140px;
+    }
+
+    @include size (1200px) {
         margin: 0 3%;
     }
+
 }

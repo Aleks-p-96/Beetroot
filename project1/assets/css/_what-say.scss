@@ -2,6 +2,10 @@
     padding: 120px 0 180px 0;
     background: url(../images/what-say/WhatBackground.webp) 50% 0/cover no-repeat;
 
+    @include tablet-size {
+        padding: 60px 0 120px 0;
+    }
+
     &__container {
         @include container;
     }

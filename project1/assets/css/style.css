@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Aleo&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Roboto:wght@400;500&display=swap");
 .button {
+  position: relative;
   display: inline-block;
   background-color: #5373FD;
   color: #FFFFFF;
+  z-index: 1;
+  transition: scale 0.2s linear;
   font-family: "Aleo";
   font-weight: 400;
   font-size: 16px;
@@ -10,6 +13,20 @@
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+}
+.button::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 60px;
+  content: url("data:image/svg+xml;charset=UTF-8,<svg width='109' height='60' viewBox='0 0 109 60' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0H52L109 60H0V0Z' fill='%23486BFE'/></svg>");
+}
+.button:hover {
+  scale: 1.05;
+}
+.button:active {
+  border: 2px solid #333333;
 }
 
 .header {
@@ -21,7 +38,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .header__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .header__container {
     margin: 0 3%;
   }
@@ -87,6 +109,7 @@
   height: 52px;
   background-color: #5373FD;
   padding: 16px 24px 16px 52px;
+  transition: scale 0.2s linear;
 }
 .header__button:before {
   position: absolute;
@@ -94,6 +117,12 @@
   width: 18px;
   height: 18px;
   content: url("data:image/svg+xml;charset=UTF-8,<svg width='16' height='16' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M63.1296 55.3321L50.6662 42.8708C50.1037 42.3084 49.3411 41.9959 48.541 41.9959H46.5034C49.9537 37.5838 52.0038 32.0344 52.0038 25.9975C52.0038 11.6364 40.3655 0 26.0019 0C11.6384 0 0 11.6364 0 25.9975C0 40.3586 11.6384 51.9949 26.0019 51.9949C32.0398 51.9949 37.5903 49.9451 42.0031 46.4955V48.5328C42.0031 49.3327 42.3156 50.0951 42.8781 50.6576L55.3416 63.1188C56.5166 64.2937 58.4168 64.2937 59.5794 63.1188L63.1171 59.5817C64.2922 58.4068 64.2922 56.507 63.1296 55.3321ZM26.0019 41.9959C17.1638 41.9959 10.0007 34.8466 10.0007 25.9975C10.0007 17.1608 17.1513 9.99902 26.0019 9.99902C34.84 9.99902 42.0031 17.1483 42.0031 25.9975C42.0031 34.8341 34.8526 41.9959 26.0019 41.9959Z' fill='white'/></svg>");
+}
+.header__button:hover {
+  scale: 1.05;
+}
+.header__button:active {
+  border: 2px solid #333333;
 }
 
 .navigation {
@@ -104,7 +133,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .navigation__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .navigation__container {
     margin: 0 3%;
   }
@@ -124,7 +158,7 @@
   font-family: "Josefin Sans";
   font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 20px;
   color: #FFFFFF;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -163,15 +197,30 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .why-choose__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .why-choose__container {
     margin: 0 3%;
   }
 }
 .why-choose__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 136px;
+}
+@media (max-width: 1360px) {
+  .why-choose__wrapper {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1200px) {
+  .why-choose__wrapper {
+    gap: 24px;
+  }
 }
 @media (max-width: 1023px) {
   .why-choose__wrapper {
@@ -210,7 +259,6 @@
   line-height: 28px;
   color: #FFFFFF;
   letter-spacing: 0.1em;
-  max-width: 558px;
 }
 @media (max-width: 1023px) {
   .why-choose__text {
@@ -230,6 +278,14 @@
 .why-choose__button {
   padding: 20px 32px;
 }
+.why-choose__text-block {
+  max-width: 648px;
+}
+@media (max-width: 1360px) {
+  .why-choose__text-block {
+    max-width: 558px;
+  }
+}
 @media (max-width: 1023px) {
   .why-choose__text-block {
     display: flex;
@@ -238,14 +294,26 @@
   }
 }
 .why-choose__images-block {
+  width: 424px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   flex: 0 0 auto;
 }
+@media (max-width: 1360px) {
+  .why-choose__images-block {
+    width: 461px;
+  }
+}
+@media (max-width: 1200px) {
+  .why-choose__images-block {
+    width: 386px;
+  }
+}
 @media (max-width: 1023px) {
   .why-choose__images-block {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
@@ -264,6 +332,8 @@
   .why-choose__image {
     width: 100%;
     max-height: 219px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -280,7 +350,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .steps__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .steps__container {
     margin: 0 3%;
   }
@@ -346,6 +421,11 @@
   padding: 220px 0 120px 0;
   background: url(../images/book-now-1/Book-1Background.webp) 50% 0/cover no-repeat;
 }
+@media (max-width: 1023px) {
+  .book-now {
+    padding: 120px 0 120px 0;
+  }
+}
 .book-now--2 {
   background: url(../images/book-now-2/Book-2Background.webp) 50% 0/cover no-repeat;
 }
@@ -353,7 +433,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .book-now__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .book-now__container {
     margin: 0 3%;
   }
@@ -417,11 +502,21 @@
   padding: 120px 0 180px 0;
   background: url(../images/what-say/WhatBackground.webp) 50% 0/cover no-repeat;
 }
+@media (max-width: 1023px) {
+  .what-say {
+    padding: 60px 0 120px 0;
+  }
+}
 .what-say__container {
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .what-say__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .what-say__container {
     margin: 0 3%;
   }
@@ -497,7 +592,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1359px) {
+@media (max-width: 1360px) {
+  .footer__container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
   .footer__container {
     margin: 0 3%;
   }
@@ -511,7 +611,7 @@
   font-family: "Josefin Sans";
   font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 20px;
   color: #FFFFFF;
   letter-spacing: 0.1em;
   text-transform: uppercase;
