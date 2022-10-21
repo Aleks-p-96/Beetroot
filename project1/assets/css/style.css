@@ -38,7 +38,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .header__container {
     max-width: 1140px;
   }
@@ -83,7 +83,7 @@
   position: relative;
 }
 .header__input {
-  padding: 20px 150px 20px 36px;
+  padding: 20px 160px 20px 36px;
   height: 60px;
   width: 100%;
   font-family: "Josefin Sans";
@@ -92,6 +92,9 @@
   line-height: 20px;
   color: #999999;
   letter-spacing: 0.2em;
+}
+.header__input:focus {
+  border: 3px solid #4d48b7;
 }
 .header__button {
   position: absolute;
@@ -109,7 +112,7 @@
   height: 52px;
   background-color: #5373FD;
   padding: 16px 24px 16px 52px;
-  transition: scale 0.2s linear;
+  transition: scale 0.3s ease;
 }
 .header__button:before {
   position: absolute;
@@ -126,6 +129,7 @@
 }
 
 .navigation {
+  position: relative;
   padding: 32px 0;
   background: #5373FD;
 }
@@ -133,7 +137,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .navigation__container {
     max-width: 1140px;
   }
@@ -154,6 +158,21 @@
     gap: 32px;
   }
 }
+@media (max-width: 767px) {
+  .navigation__wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .navigation__logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
 .navigation__logo {
   font-family: "Josefin Sans";
   font-weight: 700;
@@ -163,11 +182,66 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.navigation__input {
+  display: none;
+}
+.navigation__input:checked + .navigation__logo-container .navigation__burger {
+  border: none;
+}
+.navigation__input:checked + .navigation__logo-container .navigation__burger:before {
+  transform: rotate(45deg);
+}
+.navigation__input:checked + .navigation__logo-container .navigation__burger:after {
+  transform: rotate(-45deg);
+}
+.navigation__input:checked ~ .navigation__menu {
+  scale: 1;
+}
+.navigation__burger {
+  display: none;
+}
+@media (max-width: 767px) {
+  .navigation__burger {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 24px;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+  }
+  .navigation__burger::after, .navigation__burger::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+}
 
+@media (max-width: 767px) {
+  .menu {
+    scale: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #5373FD;
+    z-index: 1;
+    padding: 32px 0;
+    transition: all 0.3s ease;
+  }
+}
 .menu__list {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .menu__list {
+    flex-direction: column;
+  }
 }
 .menu__item {
   display: flex;
@@ -181,6 +255,13 @@
   color: #FFFFFF;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.menu__link:hover {
+  scale: 1.1;
+}
+.menu__link:active {
+  color: rgb(177, 174, 185);
 }
 
 .why-choose {
@@ -197,7 +278,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .why-choose__container {
     max-width: 1140px;
   }
@@ -212,7 +293,7 @@
   align-items: center;
   gap: 136px;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .why-choose__wrapper {
     justify-content: space-between;
   }
@@ -281,7 +362,7 @@
 .why-choose__text-block {
   max-width: 648px;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .why-choose__text-block {
     max-width: 558px;
   }
@@ -300,7 +381,7 @@
   gap: 16px;
   flex: 0 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .why-choose__images-block {
     width: 461px;
   }
@@ -350,7 +431,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .steps__container {
     max-width: 1140px;
   }
@@ -433,7 +514,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .book-now__container {
     max-width: 1140px;
   }
@@ -511,7 +592,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .what-say__container {
     max-width: 1140px;
   }
@@ -592,7 +673,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .footer__container {
     max-width: 1140px;
   }

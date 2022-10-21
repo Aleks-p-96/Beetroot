@@ -1,10 +1,25 @@
 
 .menu {
+
+    @include mobile-size {
+        scale: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background: $blue;
+        z-index: 1;
+        padding: 32px 0;
+        transition: all .3s ease;
+    }
     
     &__list {
         display: flex;
         gap: 40px;
         align-items: center;       
+
+        @include mobile-size {
+            flex-direction: column;
+        }
     }
     
     &__item {
@@ -14,6 +29,15 @@
     
     &__link {
         @include font-nav;
+        transition: all .3s ease;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        &:active {
+            color: rgb(177, 174, 185);
+        }
     }
 }
     
