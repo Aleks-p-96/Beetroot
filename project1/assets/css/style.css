@@ -31,7 +31,7 @@
 
 .header {
   position: relative;
-  padding: 295px 0 371px 0;
+  padding: 295px 0 120px 0;
   background: url(../images/header/HeaderBackground.webp) 50% 0/cover no-repeat;
 }
 .header__container {
@@ -95,6 +95,21 @@
 }
 .header__input:focus {
   border: 3px solid #4d48b7;
+}
+.header__form + .header__scroll {
+  margin-top: 211px;
+}
+.header__scroll {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 .header__button {
   position: absolute;

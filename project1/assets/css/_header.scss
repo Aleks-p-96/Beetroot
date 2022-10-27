@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    padding: 295px 0 371px 0;
+    padding: 295px 0 120px 0;
     background: url(../images/header/HeaderBackground.webp) 50% 0/cover no-repeat;
 
     &__container {
@@ -45,6 +45,18 @@
         &:focus {
             border: 3px solid #4d48b7;
         }
+    }
+
+    &__form + &__scroll {
+        margin-top: 211px;
+    }
+
+    &__scroll {
+        @include font-scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
     }
 
     &__button {

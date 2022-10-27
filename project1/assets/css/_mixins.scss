@@ -51,6 +51,11 @@
     letter-spacing: 0.2em;
 }
 
+@mixin font-scroll {
+    @include font ($josefin, 400, 14px, 20px, $white);
+    letter-spacing: 0.2em;
+}
+
 @mixin font-search-button {
     @include font ($aleo, 400, 14px, 20px, $white);
     letter-spacing: 0.1em;
