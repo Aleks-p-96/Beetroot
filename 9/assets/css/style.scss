@@ -1,0 +1,107 @@
+.professionSection {
+    & + & {
+        margin: 100px 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    
+    &__left {
+        &--525 {
+            max-width: 525px;
+        }
+
+        &--486 {
+            max-width: 486px;
+        }
+
+        &--505 {
+            max-width: 505px;
+        }
+    }
+    
+    &__title-block + &__list{
+        margin-top: 40px;
+    }
+    
+    &__subtitle {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #544837;
+    }
+    
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        color: #2F281E;
+
+    }
+
+    &__title + &__title-description {
+        margin-top: 20px;
+    }
+    
+    &__title-description {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #544837;
+    }
+    
+    &__list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    &__list-item {
+        &--left65 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 65px;
+        }
+    }
+
+    &__list-icon {
+        position: absolute;
+        left: 0;
+        min-width: 35px;
+        min-height: 35px;
+    }
+    
+    &__list-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: #2F281E;
+    }
+    
+    &__list-text {
+    }
+    
+    &__right {
+    }
+    
+    &__image {
+    }
+}
+
+    

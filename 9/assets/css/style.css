@@ -1,159 +1,76 @@
-body, .flexP a{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: #544837;
+.professionSection + .professionSection {
+  margin: 100px 0;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+.professionSection__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header{
-    padding: 26px;
-    margin-bottom: 70px;
+.professionSection__wrapper--reverse {
+  flex-direction: row-reverse;
 }
-.headerFlex{
-    display: flex;
-    justify-content: space-between;
-    gap: 142px;
-    align-items: center;
+.professionSection__left--525 {
+  max-width: 525px;
 }
-.nav{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
+.professionSection__left--486 {
+  max-width: 486px;
 }
-.nav *:hover{
-    color: #FF9900;
+.professionSection__left--505 {
+  max-width: 505px;
 }
-.nav a{margin-right: 20px;
-    color: #2F281E;
-    vertical-align: middle;
+.professionSection__title-block + .professionSection__list {
+  margin-top: 40px;
 }
-
-.headerButton{
-    font-size: 16px;
-    line-height: 20px;
-    padding: 13px 25px;
-    border-radius: 4px;
-    border: 1px solid #BCD0E5;
-    background: #FFFFFF;
-    font-weight: 600;
+.professionSection__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #544837;
 }
-.headerButton + .headerButton{
-    color:#FFFFFF;
-    background: #FF9900;
-    margin-left: 32px;
-    border: none;
+.professionSection__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2F281E;
 }
-.firstFlex{
-    display: flex;
-    gap: 56px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 100px;
+.professionSection__title + .professionSection__title-description {
+  margin-top: 20px;
 }
-.firstText{
-    display: flex;
-    flex-direction: column;
+.professionSection__title-description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #544837;
 }
-h1,h2,h3{
-    color: #2F281E;
-    font-weight: 700;
+.professionSection__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-
-h1{
-    font-size: 44px;
-    line-height: 54px;  
+.professionSection__list-item--left65 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 65px;
 }
-h1 + p{
-    margin: 30px 0 20px 0;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
+.professionSection__list-icon {
+  position: absolute;
+  left: 0;
+  min-width: 35px;
+  min-height: 35px;
 }
-.firstSectionButton{
-    padding: 13px 40px;
-    background: #FF9900;
-    border-radius: 4px;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-}
-h2{
-    font-size: 36px;
-    line-height: 44px;
-}
-.center{
-    text-align: center;
-}
-
-.flexfeatures{
-    margin: 50px 0 70px 0;
-    display: flex;
-    gap: 45px;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.featureItem{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.itemText h3{
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
-    margin-bottom: 16px;
-}
-.flexButton{
-    display: flex;
-    justify-content: center;
-}
-.buttonSignUp{
-    background: #FF9900;
-    border-radius: 4px;
-    padding: 13px 40px;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-}
-.features{
-    padding-bottom: 78px;
-    background: url(../img/bg.png) bottom center no-repeat;
-    background-size: 100%;
-    margin-bottom: 100px;
-}
-.footer{
-    padding: 70px 0;
-    border-top: rgba(188, 208, 229, 0.496913) 1px solid;
-}
-.flexfooter{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.footerColumn{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.flexP{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;;
-}
-h4{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-}
-.footerInput{
-    border: 1px solid #BCD0E5;
-    border-radius: 4px;
-    padding: 15px 10px;
-    width: 100%;
+.professionSection__list-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2F281E;
 }
