@@ -1,0 +1,21 @@
+.content {
+    
+    &__container {
+    }
+    
+    &__header {
+    }
+
+    &__header + &__main {
+        margin-top: 68px;
+    }
+    
+    &__main {
+    max-width: 1170px;
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: fill;
+    }
+    }
