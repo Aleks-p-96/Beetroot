@@ -95,6 +95,15 @@
   background: #9E8CFC;
   box-shadow: 0px 0px 20px rgba(158, 140, 252, 0.7);
 }
+.aside__element-wrapper:hover .aside__element-description {
+  color: #FFFFFF;
+}
+.aside__element-wrapper:hover .aside__element-svg {
+  fill: #FFFFFF;
+}
+.aside__element-wrapper:hover .aside__element-svg-with-badge::after {
+  color: #FFFFFF;
+}
 .aside__element-wrapper--title {
   padding: 0px 15px 5px;
 }
@@ -111,6 +120,46 @@
   text-transform: uppercase;
   color: #828282;
 }
+.aside__element-svg {
+  transition: all 0.3s ease;
+}
+.aside__element-svg-with-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.aside__element-svg-with-badge::after {
+  position: absolute;
+  content: "10";
+  top: -5px;
+  right: -14px;
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+  transition: all 0.3s ease;
+}
+.aside__element-svg-with-badge--green::after {
+  background: #6FCF97;
+}
+.aside__element-svg-with-badge--red::after {
+  background: #EA5455;
+}
+.aside__element-svg-with-badge--yellow::after {
+  background: #F2C94C;
+}
+.aside__element-svg--badge::after {
+  content: "2";
+}
 .aside__element-description {
   font-family: "Montserrat";
   font-style: normal;
@@ -118,6 +167,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #4F4F4F;
+  transition: all 0.3s ease;
 }
 
 .header {

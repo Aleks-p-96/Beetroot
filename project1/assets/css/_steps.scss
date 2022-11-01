@@ -56,6 +56,7 @@
             fill: $blue;
             width: 64px;
             height: 64px;
+            transition: all .3s ease;
         }
     
     &:hover &__svg {

@@ -37,6 +37,7 @@
         &__svg {
             height: 32px;
             fill: $white;
+            transition: all .3s ease;
         }
     
         &:hover &__svg {

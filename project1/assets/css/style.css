@@ -500,6 +500,7 @@
   fill: #5373FD;
   width: 64px;
   height: 64px;
+  transition: all 0.3s ease;
 }
 .steps__icon:hover .steps__icon__svg {
   fill: #FF6363;
@@ -735,6 +736,7 @@
 .footer__socials-element__svg {
   height: 32px;
   fill: #FFFFFF;
+  transition: all 0.3s ease;
 }
 .footer__socials-element:hover .footer__socials-element__svg {
   fill: #5373FD;

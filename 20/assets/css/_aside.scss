@@ -95,8 +95,17 @@
         transition: all .3s ease;
 
         &:hover {
-            background: #9E8CFC;
+            background: $purple-light;
             box-shadow: 0px 0px 20px rgba(158, 140, 252, 0.7);
+            .aside__element-description {
+                color: $white;
+            }
+            .aside__element-svg {
+                fill: $white;
+            }
+            .aside__element-svg-with-badge::after {
+                color: $white;
+            }
         }
     }
     
@@ -129,6 +138,54 @@
     }
     
     &__element-svg {
+        transition: all .3s ease;
+    }
+
+    &__element-svg-with-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '10';
+            top: -5px;
+            right: -14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: $gray-dark;
+            transition: all .3s ease;
+        }
+        &--green {
+            &::after {
+                background: $green;
+            }
+        }
+        &--red {
+            &::after {
+                background: $red;
+            }
+        }
+        &--yellow {
+            &::after {
+                background: $yellow;
+            }
+        }
+    }
+
+    &__element-svg--badge {
+        &::after {
+            content: '2';
+        }
     }
     
     &__element-description {
@@ -138,6 +195,7 @@
         font-size: 16px;
         line-height: 20px;
         color: $gray-dark;
+        transition: all .3s ease;
     }
     }
     
