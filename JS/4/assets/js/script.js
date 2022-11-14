@@ -21,6 +21,12 @@ console.log(`Function expression:
 let "function-name" = function (arguments) {
     function body
 };`);
+console.log(`Arrow  expression:
+let "function-name" = (arguments) => expression;
+or:
+let "function-name" = (arguments) => {
+    function body
+}`);
 
 //2
 1
