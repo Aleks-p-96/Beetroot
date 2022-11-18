@@ -1,205 +1,166 @@
-// 'use strict';
-// //Мінімум
-// //1
-// let age = prompt('How old are you?', 26);
-// let message = (age == 0 || age > 0 && age < 12) ? console.log('Ви дитина') :
-//     (age >= 12 && age < 18) ? console.log('Ви підліток') :
-//     (age >=18 && age < 60) ? console.log('Ви дорослий') :
-//     (age > 60 ) ? console.log('Ви пеніонер') :
-//     !(age) ? console.log('Введені некоректні дані') : console.log('Введені некоректні дані');
-//     console.log(age);
+'use strict';
+console.log(`
+List of functions:
+function Product(name, amount, price = 15, purchased)
+function showNonBuyFirst(arr)
+function showProducts(arr)
+function markPurchase(array,productName)
+function deleteFromList(arr, productForDelete)
+function addToList(arr, productName, amount, price)
+function totalSum (arr)
+function nonPurchasedSum (arr)
+function sortList(arr, sortType = 'toMax' [or 'toMin'])
+`)
 
-// //2
-//     let usernum = +prompt('Введіть число від 0 до 9');
-//     switch (usernum) {
-//         case 1:
-//             alert('1 !');
-//             break;
-//         case 2:
-//             alert('2 @');
-//             break;
-//         case 3:
-//             alert('3 #');
-//             break;
-//         case 4:
-//             alert('4 $');
-//             break;
-//         case 5:
-//             alert('5 %');
-//             break;
-//         case 6:
-//             alert('6 ^');
-//             break;
-//         case 7:
-//             alert('7 &');
-//             break;
-//         case 8:
-//             alert('8 *');
-//             break;
-//         case 9:
-//             alert('9 (');
-//             break;
-//         case 0:
-//             alert('0 )');
-//             break;
-            
-//     }
+const shoppingList = [
+    new Product('banana', 3 , 60 , false),
+    new Product('apple', 7, 12, true),
+    new Product('orange', 5, 65, false),
+    // new Product('tomato', 5, 70, true),
+    // new Product('cucumber', 5, 66, false),
+    // new Product('bread', 5, 18, false),
+    // new Product('water', 5, 10, true),
+    // new Product('juice', 5, 37, false),
+    // new Product('beer', 5, 30, true),
+    // new Product('chips', 5, 45, true),
 
-// //3
-// let sum = 0;
-// let n1 = +prompt('Введіть початок числового діапазону', 3);
-// let n2 = +prompt('Введіть кінець числового діапазону', 8);
-// for (let i = n1; i <= n2; i++) {
-//     sum = sum + i;
-// }
-// console.log(`Сума чисел числового діапазону від ${n1} до ${n2} = ${sum} `);
+];
+console.log('Displaying non-purchased first')
+showNonBuyFirst(shoppingList);
+console.log("Marking banana purchase:")
+markPurchase(shoppingList,'banana');
+showProducts(shoppingList);
+console.log('Deleting apple from list:')
+deleteFromList(shoppingList,'apple');
+showProducts(shoppingList);
+console.log('Adding cherry and + some orange to list:')
+addToList(shoppingList, 'cherry', 3, 68);
+addToList(shoppingList, 'orange', 3);
+showProducts(shoppingList);
+totalSum(shoppingList);
+nonPurchasedSum(shoppingList);
+console.log('sorting +')
+sortList(shoppingList,'toMax');
+showProducts(shoppingList);
+console.log('sorting -');
+sortList(shoppingList,'toMin');
+showProducts(shoppingList);
 
 
-// // 4
-// let a = +prompt ('Введіть перше число для знаходження НСД', 55);
-// let b = +prompt ('Введіть друге число для знаходження НСД', 255);
-// if (a === b) {
-//     console.log(`Найбільший спільний дільник ${a} і ${a} це ${a}`);
-// } else if (a <= b) {
-//     for(let i = a; i >= 0; i--) {
-//         if ((a % i == 0) && (b % i == 0)) {
-//             console.log(`Найбільший спільний дільник ${a} і ${b} це ${i}`);
-//             break;
-//         }
-//     }
-// } else if (a > b) {
-//     for(let i = a; i >= 0; i--) {
-//         if ((a % i == 0) && (b % i == 0)) {
-//             console.log(`Найбільший спільний дільник ${a} і ${b} це ${i}`);
-//             break;
-//         }
-//     }
-// }
 
-// //5
-// let p = prompt('Введіть число для пошуку його дільників',44);
-// console.log(`Дільники числа: ${p}`)
-// for (let i = p ; i > 0; i--) {
-//     if (p % i == 0) {
-//         console.log(i);
-//     }
-// }
 
-// //Норма
-// //1
-// let num = +prompt('Введіть число для визначення чи є воно паліндромом', 123);
-// let i = num;
-// let reversenum = 0;
-// while (i) {
-//     reversenum = reversenum * 10 + i % 10;
-//     i = Math.floor(i / 10);
-// }
-// if ( num == reversenum) {
-//     console.log (`Число ${num} є паліндромом`);
-// } else console.log(`Число ${num} не є паліндромом`);
 
-// //2
-// let amount = +prompt('Введіть суму покупки', 400);
-// let price = (amount >= 200 && amount < 300 ) ? +(amount - (amount * 0.03).toFixed(2)).toFixed(2) :
-//     (amount >= 300 && amount < 500 ) ? +(amount - (amount * 0.05).toFixed(2)).toFixed(2) :
-//     (amount >= 500) ? +(amount - (amount * 0.07).toFixed(2)).toFixed(2) :
-//     amount;
-// console.log(`Ціна зі знижкою: ${price}`);
 
-// //3
-// let positive = 0, negative = 0, zeros = 0, even = 0, odd = 0;
-// for (let i = 7; i < 10; i++) {
-//     let x = +prompt('Введіть число');
-//     if (x == 0) zeros++;
-//     if (x > 0) positive++;
-//     if (x < 0) negative++;
-//     if (x % 2 == 0) even++;
-//     if (x % 2 != 0) odd++;
-// }
-// console.log(`Нулів: ${zeros}`);
-// console.log(`Додатніх: ${positive}`);
-// console.log(`Від'ємних: ${negative}`);
-// console.log(`Парних: ${even}`);
-// console.log(`Непарних: ${odd}`);
 
-// //4
-// let x = ' ', dayCounter = 0, currentDay = '';
-// while(x) {
-//     dayCounter = 1 + dayCounter % 7;
-//     switch(dayCounter) {
-//         case 1:
-//             currentDay = 'Понеділок';
-//             break;
-//         case 2:
-//             currentDay = 'Вівторок';
-//             break;
-//         case 3:
-//             currentDay = 'Середа';
-//             break;
-//         case 4:
-//             currentDay = 'Четвер';
-//             break;
-//         case 5:
-//             currentDay = 'П\'ятниця';
-//             break;
-//         case 6:
-//             currentDay = 'Субота';
-//             break;
-//         case 7:
-//             currentDay = 'Неділя';
-//             break;
-//     }
-//     x = confirm(`${currentDay},хочеш побачити наступний день`);
-// }
 
-// //Максимум
-// //1
-// let findNum = 0,
-//     minNum = 0,
-//     maxNum = 100;
-// while (true) {
-//     findNum = Math.round((minNum + maxNum) / 2);
-//     if (confirm (`Ваше число ${findNum}?`)) {
-//         break;
-//     } else if (confirm (`Ваше число > ${findNum}`)) {
-//         minNum = findNum;
-//     } else if (confirm (`Ваше число < ${findNum}`)) {
-//         maxNum = findNum;
-//     }
-// }
 
-// //2
-// for (let i = 2; i <= 9; i++) {
-//     for (let j = 1; j <= 10; j++) {
-//         console.log(`${i} * ${j} = ${i * j}`);
-//     }
-// }
 
-// //3
 
-// let day = +prompt('Введіть день (1-31)', '30');
-// let month =  +prompt('Введіть місяць (1-12)', '08');
-// let year = +prompt('Введіть рік', '1996');
-// let leapYear = (year % 4 == 0);
 
-// if ((day < 1 || day > 31 || month < 1 || month >12) ||
-// 	(month == 2 && leapYear && day > 28) ||
-// 	((month == 4 || month == 6 || month == 9 || month == 11)  && day > 30)) {
-//     console.log('Введено некоректні дані');
-// } else if ((month == 12) && (day == 31) )  {
-//     year ++;
-//     day = 131
-//     month = 1;
-// } else if (month == 2 && leapYear && day == 28) {
-//     day = 1;
-//     month++;
-// } else if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 30) {
-//     day = 1;
-//     month++;
-// } else if (day == 31) {
-//     day = 1;
-//     month++;
-// } else day++;
-// month = (month < 10) ? `0${month}` : month;
-// day = (day < 10) ? `0${day}` : day;
-// console.log(`Наступна дата: ${day}.${month}.${year}`);
+function Product(name, amount, price = 15, purchased) {
+    this.name = name;
+    this.amount = amount;
+    this.price = price;
+    this.purchased = purchased ? 'yes' : 'no';
+    this.totalPrice = price * amount;
+}
+
+function showNonBuyFirst(arr) {
+    let no = arr.filter( product => product.purchased == 'no');
+    let yes = arr.filter( product => product.purchased == 'yes');
+    let result = no.concat(yes);
+    let item = `
+`;
+    for (let product of result) {
+        console.log("Product:")
+        for (let key in product) {
+            item += (`${key}: ${product[key]}
+`);
+        }
+        console.log(item);
+        item = '';
+    }
+}
+
+function showProducts(arr) {
+    let item = `
+`;
+    for (let product of arr) {
+        console.log("Product:")
+        for (let key in product) {
+            item += (`${key}: ${product[key]}
+`);
+        }
+        console.log(item);
+        item = '';
+    }
+}
+
+function markPurchase(array,productName) {
+    for (let product of array) {
+        for (let key in product) {
+            if(product[key] == productName);
+            product['purchased'] = 'yes';
+        }
+    }
+}
+
+function deleteFromList(arr, productForDelete) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]['name'] == productForDelete) {
+            arr.splice(i,1);
+        }
+    }
+}
+
+function addToList(arr, productName, amount, price) {
+    for (let product of arr) {
+        if (product['name'] == productName) {
+            // console.log(`${prop}: ${product[prop]}`);
+            product['amount'] += amount;
+            product['totalPrice'] = product['amount'] * product['price'];
+            return;
+        }
+    }
+    arr.push(new Product(productName, amount, price, false));
+
+}
+
+function totalSum (arr) {
+    let totalSum = 0;
+    for (let product of arr) {
+        totalSum += product['totalPrice'];
+    }
+    console.log(`Total price of all products: ${totalSum}`);
+    return totalSum;
+}
+
+function nonPurchasedSum (arr) {
+    let totalSum = 0;
+    for (let product of arr) {
+        if( product['purchased'] == 'no') {
+            totalSum += product['totalPrice'];
+        }
+    }
+    console.log(`Total price of not purchased products: ${totalSum}`);
+    return totalSum;
+}
+
+function sortList(arr, sortType = 'toMax') {
+    let type = sortType;
+    if (type == 'toMax') {
+        arr.sort((x, y) => (x.totalPrice > y.totalPrice) ? 1 : -1);
+    }
+    if (type == 'toMin') {
+        arr.sort((x, y) => (x.totalPrice > y.totalPrice) ? -1 : 1);
+    }
+}
+
+// showProducts(shoppingList);
+// showProducts(shoppingList);
+
+// sortList(shoppingList, '-')
+// showProducts(shoppingList);
+
+
+
