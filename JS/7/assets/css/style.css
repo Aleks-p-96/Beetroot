@@ -1,0 +1,104 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.traffic-light {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 100px;
+}
+
+.traffic-light__elem {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.active {
+    opacity: 1;
+}
+
+.traffic-button {
+    color: rgb(216, 170, 83);
+    border: 1px solid rgb(80, 78, 76);
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.playlist {
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.modal-container {
+    top: 40%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-window {
+    width: 220px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(87, 81, 81);
+    border-radius: 25px;
+    background-color: rgb(104, 104, 124);
+}
+
+.modal-text {
+    color: beige;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn {
+    background-color: rgb(31, 31, 122);
+    border: 2px solid rgb(33, 39, 85);
+    color: beige;
+    padding: 3px 15px;
+    border-radius: 15px;
+
+}
+
+.not-displayed {
+    display: none;
+}
+
+#btn-open {
+    margin-top: 50px;
+}

@@ -116,7 +116,6 @@ function deleteFromList(arr, productForDelete) {
 function addToList(arr, productName, amount, price) {
     for (let product of arr) {
         if (product['name'] == productName) {
-            // console.log(`${prop}: ${product[prop]}`);
             product['amount'] += amount;
             product['totalPrice'] = product['amount'] * product['price'];
             return;
@@ -155,12 +154,6 @@ function sortList(arr, sortType = 'toMax') {
         arr.sort((x, y) => (x.totalPrice > y.totalPrice) ? -1 : 1);
     }
 }
-
-// showProducts(shoppingList);
-// showProducts(shoppingList);
-
-// sortList(shoppingList, '-')
-// showProducts(shoppingList);
 
 
 
