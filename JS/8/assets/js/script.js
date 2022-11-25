@@ -1,205 +1,187 @@
-// 'use strict';
-// //Мінімум
-// //1
-// let age = prompt('How old are you?', 26);
-// let message = (age == 0 || age > 0 && age < 12) ? console.log('Ви дитина') :
-//     (age >= 12 && age < 18) ? console.log('Ви підліток') :
-//     (age >=18 && age < 60) ? console.log('Ви дорослий') :
-//     (age > 60 ) ? console.log('Ви пеніонер') :
-//     !(age) ? console.log('Введені некоректні дані') : console.log('Введені некоректні дані');
-//     console.log(age);
+'use strict'
+// 1.Створити HTML-сторінку для відображення/редагування тексту. При відкритті сторінки текст відображається за допомогою тега div. При натисканні Ctrl + E, замість div з'являється textarea з тим же текстом, який тепер можна редагувати. При натисканні Ctrl + S, замість textarea з'являється div з уже зміненим текстом. Не забудь вимкнути поведінку за замовчуванням для цих поєднань клавіш.
 
-// //2
-//     let usernum = +prompt('Введіть число від 0 до 9');
-//     switch (usernum) {
-//         case 1:
-//             alert('1 !');
-//             break;
-//         case 2:
-//             alert('2 @');
-//             break;
-//         case 3:
-//             alert('3 #');
-//             break;
-//         case 4:
-//             alert('4 $');
-//             break;
-//         case 5:
-//             alert('5 %');
-//             break;
-//         case 6:
-//             alert('6 ^');
-//             break;
-//         case 7:
-//             alert('7 &');
-//             break;
-//         case 8:
-//             alert('8 *');
-//             break;
-//         case 9:
-//             alert('9 (');
-//             break;
-//         case 0:
-//             alert('0 )');
-//             break;
-            
-//     }
+    let textContainer = document.getElementById('task-1');
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.code === 'KeyE') {
+            event.preventDefault();
+            let textDiv = document.getElementById('div-text');
+            let textInside = textDiv.innerText;
+            let textArea = document.createElement('textarea');
+            textArea.id = 'textArea';
+            textArea.innerHTML = textInside;
+            textArea.cols = '30';
+            textArea.rows = '10';
+            textDiv.remove();
+            textContainer.prepend(textArea);
+        }
+        if (event.ctrlKey && event.code === 'KeyS') {
+            event.preventDefault();
+            let textArea = document.getElementById('textArea');
+            console.log(textArea);
+            let textInside = textArea.value;
+            let textDiv = document.createElement('div');
+            textDiv.id = 'div-text';
+            textDiv.innerHTML = textInside;
+            textArea.remove();
+            textContainer.prepend(textDiv);
+        }
+    })
 
-// //3
-// let sum = 0;
-// let n1 = +prompt('Введіть початок числового діапазону', 3);
-// let n2 = +prompt('Введіть кінець числового діапазону', 8);
-// for (let i = n1; i <= n2; i++) {
-//     sum = sum + i;
-// }
-// console.log(`Сума чисел числового діапазону від ${n1} до ${n2} = ${sum} `);
+// 2. Створити HTML-сторінку з великою таблицею. При кліку на заголовок стовпця, необхідно відсортувати дані цього стовпця. Врахуй, що числові значення повинні сортуватися як числа, а не як рядки.
 
+const shoppingList = [
+    {
+        name: 'banana',
+        amount: 3,
+        price: 60,
+        purchased: false,
+        totalPrice: 180
+    }, {
+        name: 'apple',
+        amount: 7,
+        price: 12,
+        purchased: true,
+        totalPrice: 84
+    }, {
+        name: 'orange',
+        amount: 5,
+        price: 65,
+        purchased: false,
+        totalPrice: 325
+    }, {
+        name: 'tomato',
+        amount: 5,
+        price: 70,
+        purchased: true,
+        totalPrice: 350
+    }, {
+        name: 'cucumber',
+        amount: 5,
+        price: 66,
+        purchased: false,
+        totalPrice: 330
+    }, {
+        name: 'bread',
+        amount: 5,
+        price: 18,
+        purchased: false,
+        totalPrice: 90
+    }, {
+        name: 'water',
+        amount: 5,
+        price: 10,
+        purchased: true,
+        totalPrice: 50
+    }, {
+        name: 'juice',
+        amount: 5,
+        price: 37,
+        purchased: false,
+        totalPrice: 185
+    }, {
+        name: 'beer',
+        amount: 5,
+        price: 30,
+        purchased: true,
+        totalPrice: 150
+    }, {
+        name: 'chips',
+        amount: 5,
+        price: 45,
+        purchased: true,
+        totalPrice: 225
+    }
+];
 
-// // 4
-// let a = +prompt ('Введіть перше число для знаходження НСД', 55);
-// let b = +prompt ('Введіть друге число для знаходження НСД', 255);
-// if (a === b) {
-//     console.log(`Найбільший спільний дільник ${a} і ${a} це ${a}`);
-// } else if (a <= b) {
-//     for(let i = a; i >= 0; i--) {
-//         if ((a % i == 0) && (b % i == 0)) {
-//             console.log(`Найбільший спільний дільник ${a} і ${b} це ${i}`);
-//             break;
-//         }
-//     }
-// } else if (a > b) {
-//     for(let i = a; i >= 0; i--) {
-//         if ((a % i == 0) && (b % i == 0)) {
-//             console.log(`Найбільший спільний дільник ${a} і ${b} це ${i}`);
-//             break;
-//         }
-//     }
-// }
+    let sortType = null;
+    let tableContainer = document.getElementById('task-2');
+    let createdTable = document.createElement('table');
+    let tableHead = document.createElement('thead');
+    let tableBody = document.createElement('tbody');
+    tableContainer.append(createdTable);
+    createdTable.append(tableHead);
+    createdTable.append(tableBody);
+    addHeading();
+    addContentTable();
+    tableHead.addEventListener('click', sortBy);
 
-// //5
-// let p = prompt('Введіть число для пошуку його дільників',44);
-// console.log(`Дільники числа: ${p}`)
-// for (let i = p ; i > 0; i--) {
-//     if (p % i == 0) {
-//         console.log(i);
-//     }
-// }
+    function sortBy (event) {
+        if ((event.target.id.includes('heading'))) {
+            let sortedBy = event.target.id.replace('-heading', '');
+            shoppingListSort(sortedBy);
+            tableBody.innerHTML = '';
+            addContentTable();
+        }
+    }
 
-// //Норма
-// //1
-// let num = +prompt('Введіть число для визначення чи є воно паліндромом', 123);
-// let i = num;
-// let reversenum = 0;
-// while (i) {
-//     reversenum = reversenum * 10 + i % 10;
-//     i = Math.floor(i / 10);
-// }
-// if ( num == reversenum) {
-//     console.log (`Число ${num} є паліндромом`);
-// } else console.log(`Число ${num} не є паліндромом`);
+    function shoppingListSort (sortedBy) {
+        if (!sortType) sortType = 'ASC';
+        if (sortType === 'ASC') {
+            shoppingList.sort((a,b) => a[sortedBy] > b[sortedBy] ? 1 : -1);
+            sortType = 'DESC';
+            return;
+        }
+        if (sortType === 'DESC') {
+            shoppingList.sort((a,b) => a[sortedBy] > b[sortedBy] ? -1 : 1);
+            sortType = 'ASC';
+            return;
+        }
+    }
 
-// //2
-// let amount = +prompt('Введіть суму покупки', 400);
-// let price = (amount >= 200 && amount < 300 ) ? +(amount - (amount * 0.03).toFixed(2)).toFixed(2) :
-//     (amount >= 300 && amount < 500 ) ? +(amount - (amount * 0.05).toFixed(2)).toFixed(2) :
-//     (amount >= 500) ? +(amount - (amount * 0.07).toFixed(2)).toFixed(2) :
-//     amount;
-// console.log(`Ціна зі знижкою: ${price}`);
+    function addHeading () {
+        let i = 0;
+        for (let param in shoppingList[0]) {
+            let heading = document.createElement('th');
+            heading.innerHTML = param;
+            heading.id = `${param}-heading`;
+            i++;
+            tableHead.append(heading);
+        }
+    }
 
-// //3
-// let positive = 0, negative = 0, zeros = 0, even = 0, odd = 0;
-// for (let i = 7; i < 10; i++) {
-//     let x = +prompt('Введіть число');
-//     if (x == 0) zeros++;
-//     if (x > 0) positive++;
-//     if (x < 0) negative++;
-//     if (x % 2 == 0) even++;
-//     if (x % 2 != 0) odd++;
-// }
-// console.log(`Нулів: ${zeros}`);
-// console.log(`Додатніх: ${positive}`);
-// console.log(`Від'ємних: ${negative}`);
-// console.log(`Парних: ${even}`);
-// console.log(`Непарних: ${odd}`);
+    function addContentTable () {
+        for (let item of shoppingList) {
+            let tableRow = document.createElement('tr');
+            tableBody.append(tableRow);
+            for (let param in item) {
+                let tableCell = document.createElement('td');
+                tableCell.innerHTML = item[param];
+                tableRow.append(tableCell);
+            }
+        }
+    }
+    
 
-// //4
-// let x = ' ', dayCounter = 0, currentDay = '';
-// while(x) {
-//     dayCounter = 1 + dayCounter % 7;
-//     switch(dayCounter) {
-//         case 1:
-//             currentDay = 'Понеділок';
-//             break;
-//         case 2:
-//             currentDay = 'Вівторок';
-//             break;
-//         case 3:
-//             currentDay = 'Середа';
-//             break;
-//         case 4:
-//             currentDay = 'Четвер';
-//             break;
-//         case 5:
-//             currentDay = 'П\'ятниця';
-//             break;
-//         case 6:
-//             currentDay = 'Субота';
-//             break;
-//         case 7:
-//             currentDay = 'Неділя';
-//             break;
-//     }
-//     x = confirm(`${currentDay},хочеш побачити наступний день`);
-// }
+// 3. Створити HTML-сторінку з блоком тексту в рамці. Реалізувати можливість змінювати розмір блоку, якщо затиснути мишку в правому нижньому кутку і тягнути її далі.
 
-// //Максимум
-// //1
-// let findNum = 0,
-//     minNum = 0,
-//     maxNum = 100;
-// while (true) {
-//     findNum = Math.round((minNum + maxNum) / 2);
-//     if (confirm (`Ваше число ${findNum}?`)) {
-//         break;
-//     } else if (confirm (`Ваше число > ${findNum}`)) {
-//         minNum = findNum;
-//     } else if (confirm (`Ваше число < ${findNum}`)) {
-//         maxNum = findNum;
-//     }
-// }
+let resBtn = document.getElementById('resizer-button');
+let resizer = document.getElementById('resizer')
 
-// //2
-// for (let i = 2; i <= 9; i++) {
-//     for (let j = 1; j <= 10; j++) {
-//         console.log(`${i} * ${j} = ${i * j}`);
-//     }
-// }
+resBtn.addEventListener('mousedown', startResize);
 
-// //3
+let X,
+    Y,
+    startWidth,
+    startHeight;
 
-// let day = +prompt('Введіть день (1-31)', '30');
-// let month =  +prompt('Введіть місяць (1-12)', '08');
-// let year = +prompt('Введіть рік', '1996');
-// let leapYear = (year % 4 == 0);
+function startResize (event) {
+    event.preventDefault();
+    X = event.clientX;
+    Y = event.clientY;
+    startWidth = resizer.offsetWidth;
+    startHeight = resizer.offsetHeight;
+    window.addEventListener('mousemove', resizing);
+    window.addEventListener('mouseup', stopResize);
+}
 
-// if ((day < 1 || day > 31 || month < 1 || month >12) ||
-// 	(month == 2 && leapYear && day > 28) ||
-// 	((month == 4 || month == 6 || month == 9 || month == 11)  && day > 30)) {
-//     console.log('Введено некоректні дані');
-// } else if ((month == 12) && (day == 31) )  {
-//     year ++;
-//     day = 131
-//     month = 1;
-// } else if (month == 2 && leapYear && day == 28) {
-//     day = 1;
-//     month++;
-// } else if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 30) {
-//     day = 1;
-//     month++;
-// } else if (day == 31) {
-//     day = 1;
-//     month++;
-// } else day++;
-// month = (month < 10) ? `0${month}` : month;
-// day = (day < 10) ? `0${day}` : day;
-// console.log(`Наступна дата: ${day}.${month}.${year}`);
+function resizing (event) {
+    let changeX = event.clientX - X;
+    let changeY = event.clientY - Y;
+    resizer.style.width = `${startWidth + changeX}px`;
+    resizer.style.height = `${startHeight + changeY}px`;
+}
+
+function stopResize () {
+    window.removeEventListener('mousemove', resizing);
+}

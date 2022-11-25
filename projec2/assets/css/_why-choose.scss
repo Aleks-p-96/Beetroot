@@ -1,0 +1,133 @@
+.why-choose {
+    position: relative;
+    padding: 124px 0;
+    background: url(../images/why-choose/WhyBackground.webp) 50% 0/cover no-repeat;
+
+    @include tablet-size {
+        padding: 60px 0;
+    }
+    &__container {
+        @include container;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 136px;
+
+        @include desktop-size {
+            justify-content: space-between;
+            }
+
+        @include size(1200px) {
+            gap: 24px;
+        }
+
+        @include tablet-size {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 32px
+        }
+
+        @include mobile-size {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 37px;
+        }
+    }
+
+    &__title {
+        @include font-h2;
+    }
+
+    &__title + &__text {
+        margin-top: 24px;
+
+        @include mobile-size {
+            margin-top: 19px;
+        }
+    }
+
+    &__text {
+        @include font-regular;
+
+        @include tablet-size  {
+            max-width: none;
+            text-align: center;
+        }
+
+        & + & {
+            margin-top: 10px;
+            margin-bottom: 32px;
+
+            @include tablet-size {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__button {
+        padding: 20px 32px;
+    }
+
+    &__text-block {
+        max-width: 648px;
+
+        @include desktop-size {
+        max-width: 558px;
+
+        }
+
+        @include tablet-size {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__images-block {
+        width: 424px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 0 0 auto;
+
+        @include desktop-size {
+            width: 461px;
+            }
+
+        @include size(1200px) {
+            width: 386px;
+        }
+
+        @include tablet-size {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+    }
+
+    &__image-row {
+        display: flex;
+        max-width: 461px;
+
+        &--left {
+            justify-content: flex-start;
+        }
+
+        &--right {
+            justify-content: flex-end;
+        }
+    }
+
+    &__image {
+        @include tablet-size {
+            width: 100%;
+            max-height: 219px;
+            object-fit: cover;
+        }
+    }
+
+}
+    
