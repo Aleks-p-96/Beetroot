@@ -1,0 +1,49 @@
+.brand-slider {
+    position: relative;
+    background-color: $brown-light;
+    padding: 70px 0 70px 0;
+
+
+
+    &__container {
+        @include container;
+
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        @include f-heading-2;
+    }
+
+    &__heading + &__swiper {
+        margin-top: 40px;
+    }
+
+    &__swiper {
+    }
+
+    &__btn {
+        // top: 50%;
+        position: absolute;
+        height: 74px;
+        width: 40px;
+    }
+
+    &__item-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

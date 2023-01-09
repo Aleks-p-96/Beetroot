@@ -1,0 +1,82 @@
+.footer {
+    background-color: $brown-dark;
+    padding: 70px 0 20px 0;
+
+    &__container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px  ;
+    }
+
+    &__nav-element {
+        @include f-nav;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        @include f-heading-2;
+        color:$brown-light;
+    }
+
+    &__heading + &__socials {
+        margin: 48px 0 32px 0;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__social-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover .footer__social-svg {
+            fill:$tomato-light;
+        }
+    }
+
+
+
+    &__social-svg {
+
+    }
+
+    &__phone-number {
+        @include f-heading-2;
+        color: $brown-light;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center
+    }
+
+    &__copyright {
+        @include f-copyright;
+    }
+}

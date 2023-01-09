@@ -42,3 +42,25 @@
     margin: 0 auto;
     max-width: 1170px;
 }
+
+@mixin f-nav {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $brown-light;
+
+    &:hover {
+        color:$tomato-light;
+    }
+}
+
+@mixin f-copyright {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $brown-light;
+}
