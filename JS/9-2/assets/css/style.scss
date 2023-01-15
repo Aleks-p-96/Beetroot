@@ -1,7 +1,162 @@
-@import 'font';
-@import 'variables';
-@import 'mixins';
-@import 'main';
-@import 'header';
-@import 'button';
-@import 'first-slider';
+body {
+    background-color: #2B3040;
+}
+
+.main {
+    margin-top: 82px;
+
+    &__container {
+        max-width: 1000px;
+        padding: 154px 200px;
+        margin: 0 auto;
+        background: url('../img/bg-image.jpg') 0 0 no-repeat;
+    }
+}
+.game {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        padding: 30px 40px;
+        background-color: #2B3040;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+    }
+
+    &__header-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+    }
+
+    &__item-text {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__body {
+        background-color: #212534;
+        padding: 60px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__body-left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__image {
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__stars-item {
+    }
+
+    &__body-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__description {
+
+    }
+
+    &__score {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__heading {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+    
+    &__heading + &__date {
+        margin: 15px 0 40px;
+    }
+
+    &__date {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+
+    &__about {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #B7BACD;
+        max-width: 280px;
+    }
+
+    &__to-buy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__discount {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #FFDD3F;
+    }
+
+    &__price {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    &__buy-button {
+        background: #13E28D;
+        border-radius: 2px;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}

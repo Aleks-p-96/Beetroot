@@ -196,7 +196,7 @@ body {
 .swiper-button-prev {
   height: 74px;
   width: 40px;
-  top: 50%;
+  top: 55%;
 }
 .swiper-button-prev:hover {
   fill: #F16A50;
@@ -206,7 +206,7 @@ body {
   height: 74px;
   width: 40px;
   right: 0;
-  top: 50%;
+  top: 55%;
 }
 .swiper-button-next:hover {
   fill: #F16A50;

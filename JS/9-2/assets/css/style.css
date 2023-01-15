@@ -1,97 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 body {
-  font-family: "Montserrat";
-  font-style: normal;
+  background-color: #2B3040;
 }
 
-.container {
-  max-width: 1170px;
+.main {
+  margin-top: 82px;
+}
+.main__container {
+  max-width: 1000px;
+  padding: 154px 200px;
   margin: 0 auto;
+  background: url("../img/bg-image.jpg") 0 0 no-repeat;
 }
 
-.header__container {
-  margin: 0 auto;
-  max-width: 1170px;
-}
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__nav {
-  display: flex;
-}
-.header__nav-elem {
-  color: #000000;
-  padding: 28px 15px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-}
-.header__nav-elem:hover {
-  background: #F16A50;
-  color: #FFFFFF;
-}
-.header__right {
-  display: flex;
-  gap: 30px;
-}
-.button {
-  padding: 15px 57px;
-  color: #FFFFFF;
-  border: 2px solid #F8F1EA;
-}
-.button:hover {
-  border: 2px solid #F16A50;
-  color: #FFFFFF;
-  background: #F16A50;
-}
-.button:active {
-  color: #000000;
-  border: 2px solid #000000;
-}
-
-.first-slider__slide {
-  position: relative;
-}
-.first-slider__background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-.first-slider__container {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 120px 0 50px 0;
+.game__container {
   display: flex;
   flex-direction: column;
-  gap: 287px;
 }
-.first-slider__info-flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.first-slider__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
-.first-slider__heading {
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 61px;
-  text-transform: uppercase;
-  color: #F8F1EA;
-  max-width: 400px;
-  text-align: center;
-}
-.first-slider__dots {
+.game__header {
+  padding: 30px 40px;
+  background-color: #2B3040;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  gap: 70px;
+}
+.game__header-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.game__item-text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.game__body {
+  background-color: #212534;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.game__body-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.game__stars {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.game__body-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.game__score {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.game__heading {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.game__heading + .game__date {
+  margin: 15px 0 40px;
+}
+.game__date {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.game__about {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B7BACD;
+  max-width: 280px;
+}
+.game__to-buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.game__price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.game__discount {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FFDD3F;
+}
+.game__price {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.game__buy-button {
+  background: #13E28D;
+  border-radius: 2px;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }

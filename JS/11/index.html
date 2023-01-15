@@ -5,9 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-11</title>
+    <link rel="stylesheet" href="../../zero.css">
+    <link rel="stylesheet" href="assets/css/weather-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-</body>
+    <main>
+        <div class="container">
+            <div class="textTop">
+                <p>CSS Weather Forecast </p>
+                <i class="wi wi-sunrise"></i>
+            </div>
+            <ul class="weather">
+                <li class="w1">
+                    <p>Lisbon</p>
+                    <p class="temperature" id="Lisbon" data-lat="38.73" data-long="-9.14">21°C 
+                        <!-- <i class="wi wi-day-sunny"></i> -->
+                    </p>
+                </li>
+                <li class="w2">
+                    <p>Paris</p>
+                    <p class="temperature" id="Paris" data-lat="48.86" data-long="2.34">11°C 
+                        <!-- <i class="wi wi-day-rain-mix"></i> -->
+                    </p>
+                </li>
+                <li class="w3">
+                    <p>Belgrade</p>
+                    <p class="temperature" id="Belgrade" data-lat="44.78" data-long="20.45">15°C 
+                        <!-- <i class="wi wi-day-cloudy"></i> -->
+                    </p>
+                </li>
+                <li class="w4">
+                    <p>Venice</p>
+                    <p class="temperature" id="Venice" data-lat="45.43" data-long="12.32">21°C 
+                        <!-- <i class="wi wi-day-cloudy-high"></i> -->
+                    </p>
+                </li>
+                <li class="w5">
+                    <p>Tel-Aviv</p>
+                    <p class="temperature" id="Tel-Aviv" data-lat="32.10" data-long="34.85">21°C 
+                        <!-- <i class="wi wi-hot"></i> -->
+                    </p>
+                </li>
+                <li class="w6">
+                    <p>Cairo</p>
+                    <p class="temperature" id="Cairo" data-lat="30.03" data-long="31.23">21°C 
+                        <!-- <i class="wi wi-day-sunny"></i> -->
+                    </p>
+                </li>
+                <li class="w7">
+                    <p>New-York</p>
+                    <p class="temperature" id="New-York" data-lat="40.73" data-long="-73.93">17°C 
+                        <!-- <i class="wi wi-day-storm-showers"></i> -->
+                    </p>
+                </li>
+                <li class="w8">
+                    <p>New-Delhi</p>
+                    <p class="temperature" id="New-Delhi" data-lat="28.64" data-long="77.21">17°C 
+                        <!-- <i class="wi wi-day-rain-wind"></i> -->
+                    </p>
+                </li>
+                <li class="w9">
+                    <p>San-Francisco</p>
+                    <p class="temperature" id="San-Francisco" data-lat="37.77" data-long="-122.43">15°C 
+                        <!-- <i class="wi wi-day-sunny-overcast"></i> -->
+                    </p>
+                </li>
+                <li class="w10">
+                    <p>Tokyo</p>
+                    <p class="temperature" id="Tokio" data-lat="35.65" data-long="139.83">8°C 
+                        <!-- <i class="wi wi-night-clear"></i> -->
+                    </p>
+                </li>
+                <li class="w11">
+                    <p>Sydney</p>
+                    <p class="temperature" id="Sydney" data-lat="-33.86" data-long="151.20">25°C 
+                        <!-- <i class="wi wi-night-partly-cloudy"></i> -->
+                    </p>
+                </li>
+            </ul>
+            <p class="textBottom">
+                Have a nice day and don't forget umbrella if you are in New Delhi now!
+            </p>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/script.js"></script>
-</html>
+</body>
+</html> 

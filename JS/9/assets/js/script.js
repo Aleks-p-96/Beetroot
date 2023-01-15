@@ -16,6 +16,12 @@ const swiper = new Swiper('.swiper.first-slider', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    autoplay: {
+        delay: 5000,
+    },
+
+    speed:600,
 });
 
 const swiperSecond = new Swiper('.second-slider__slides', {
@@ -23,6 +29,10 @@ const swiperSecond = new Swiper('.second-slider__slides', {
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
+    speed:500,
+    grabCursor: 'true',
+    slideToClickedSlide: 'true',
+
     // Navigation arrows
     navigation: {
         nextEl: '.second-slider__button-next',
@@ -33,17 +43,31 @@ const swiperSecond = new Swiper('.second-slider__slides', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    autoplay: {
+        delay: 4000,
+    },
+
 });
 
 const brandSwiper = new Swiper('.brand-slider__swiper', {
-    slidesPerView: 8,
+    slidesPerView: 9,
     spaceBetween: 20,
     loop:true,
     loopFillGroupWithBlank: true,
+    speed:400,
+    slideToClickedSlide: 'true',
+    grabCursor: 'true',
+
+
 
     navigation: {
         nextEl: '.brand-slider__btn-prev',
         prevEl: '.brand-slider__btn-next',
 
-    }
+    },
+
+    autoplay: {
+        delay: 3000,
+    },
 });
