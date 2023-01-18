@@ -1,3 +1,4 @@
+'use strict'
 window.addEventListener('DOMContentLoaded', () => {
     let form = document.getElementById('search-form');
 
