@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../zero.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>JS-10</title>
 </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <form
+            autocomplete="off"
+            action="http://www.omdbapi.com/?apikey=5b1358e7"
+            method="get"
+            id="search-form"
+                >
+            <input class="search__input" name="title" type="search" placeholder="Enter film name here">
+            <select class="search__select" name="type" id="">
+                <option value="movie">movie</option>
+                <option value="series">series</option>
+                <option value="episode">episode</option>
+            </select>
+            <button class="search__button" type="submit">
+                Search
+            </button>
+            </form>
+            <a href="#" class="search__logo-container">
+                <img class="search__logo" src="assets/img/pngwing.com.png" alt="">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container">
 
-</body>
+            <div id="search-results"></div>
+            <ul id="search-pagination"></ul>
+        </div>
+    </main>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/script.js"></script>
+</body>
 </html>
