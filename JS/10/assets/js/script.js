@@ -1,5 +1,5 @@
 'use strict'
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     let form = document.getElementById('search-form');
 
     if (form) {
