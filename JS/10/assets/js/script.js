@@ -154,7 +154,7 @@ function showFilmDetails () {
         }
     axios({
         url: form.action,
-        method: form.method,
+        method: 'GET',
         params: {
             i: this.dataset.filmId,
             plot: 'short'
