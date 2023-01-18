@@ -63,7 +63,7 @@ function createFilmItem(item) {
         elPosterImage = document.createElement('img'),
         elTitle = document.createElement('h4'),
         elYear = document.createElement('h4'),
-        elButton = document.createElement('span');
+        elButton = document.createElement('span'),
         elDetails = document.createElement('p');
 
     el.classList.add('film-item');
