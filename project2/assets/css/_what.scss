@@ -1,0 +1,110 @@
+.what {
+    padding: 130px 0 150px 0;
+    overflow: hidden;
+
+    &__container {
+        @include container;
+        
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        @include font-h2;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: -30px;
+            left: auto;
+            right: auto;
+            content:'';
+            width: 100px;
+            height: 0px;
+            border: 0.5px solid;
+        }
+    }
+
+    &__title + &__block {
+        margin: 90px 0 120px 0;
+    }
+
+    &__block {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__block-image {
+        position: relative;
+        width: 50%;
+        &::before {
+            bottom: 57px;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        &--left::before {
+            right: 260px;
+            background-color: $blue;
+        }
+        &--right::before {
+            right: -260px;
+            background-color: $purple;
+        }
+    }
+
+    &__block-image img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__block-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__block-subtitle {
+        @include font-h3;
+
+    }
+    &__block-title {
+        @include font-h2;
+    }
+
+    &__block-title + &__block-description {
+        margin: 19px 0 40px 0
+    }
+
+    &__block-description {
+        @include font-p-what-we-do;
+    }
+
+    &__block-description + &__block-button {
+        margin-bottom: 60px;
+    }
+
+    &__block-button {
+        @include font-button;
+    }
+
+    &__block-location {
+        @include font-location;
+    }
+
+    &__block-location-text {
+        margin-left: 10px;
+    }
+}

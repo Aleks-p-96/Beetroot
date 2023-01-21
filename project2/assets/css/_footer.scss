@@ -1,49 +1,121 @@
 .footer {
-    padding: 80px 0;
-    background-color: $black;
+    position: relative;
+    &__background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
     &__container {
-        @include container;
+        max-width: 770px;
+        margin: 0 auto;
+        position: relative;
+        padding: 203px 0 234px 0;
     }
-    
+
     &__wrapper {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    &__title {
-        @include font-nav-title;
+        justify-content: space-between;
     }
 
-    &__title + &__subtitle {
-        margin: 8px 0 20px 0;
-    }
-    
-    &__subtitle {
-        @include font-footer;
-    }
-    
-    &__socials-wrapper {
+    &__left {
         display: flex;
-        gap: 32px;
+        flex-direction: column;
+        gap: 41px;
     }
+
+    &__logo {
+    }
+
+    &__copyright {
+        @include font-copyright;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 20px;
+    }
+
     
-    &__socials-element {
-        display: inline-flex;
-        align-items: center;
+
+    &__block-form {
+        top: -301px;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        position: absolute;
+        z-index: 9999;
+        padding: 90px 60px 68px 60px;
+    }
+
+    &__title {
+        @include font-h2;
+        display: flex;
         justify-content: center;
-
-        &__svg {
-            height: 32px;
-            fill: $white;
-            transition: all .3s ease;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: -30px;
+            left: auto;
+            right: auto;
+            content:'';
+            width: 100px;
+            height: 0px;
+            border: 0.5px solid;
         }
-    
-        &:hover &__svg {
-            fill: $blue;
-        }
 
+    }
+
+    &__title + &__form-flex {
+        margin-top: 42px;
+    }
+
+    &__form-flex {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__form-left {
+        
+    }
+
+    &__fa-icon {
+        color: $purple;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    &__form-info-element + &__form-info-element {
+        margin-top: 35px;
+    }
+
+    &__form-info {
+        margin-left: 5px;
+    }
+
+    &__form-form {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    &__form-name {
+        @include font-form;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #000;
+    }
+
+    &__form-email {
+        @include font-form;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #000;
+    }
+
+    &__form-button {
+        align-self: flex-end;
+        padding: 11px 34px;
+        color: $black;
+        background-color: $white;
+        border: 1px solid $dark;
     }
 }
-    
+

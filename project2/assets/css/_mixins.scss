@@ -1,6 +1,6 @@
 
 
-@mixin font ($font-family:$aleo, $font-weight:400, $font-size:14px, $line-heigth:20px, $color:$white) {
+@mixin font ($font-family, $font-weight:400, $font-size:14px, $line-heigth:20px, $color:$white) {
     font-family: $font-family;
     font-weight: $font-weight;
     font-size: $font-size;
@@ -8,74 +8,80 @@
     color: $color;
 }
 
-@mixin font-header-title {
-    @include font ($josefin, 700, 48px, 52px, $white);
+@mixin font-nav {
+    @include font ('Source Sans Pro', 400, 14px, 18px, $white);
     text-transform: uppercase;
+}
+
+@mixin font-header-title {
+    @include font ('Montserrat', 700, 80px, 98px, $white);
+    letter-spacing: 0.1em;
 }
 
 @mixin font-header-subtitle {
-    @include font ($josefin, 400, 22px, 28px, $white);
-    letter-spacing: 0.31em;
-}
-
-@mixin font-nav-title {
-    @include font ($josefin, 700, 24px, 20px, $white);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-@mixin font-nav {
-    @include font ($aleo, 500, 14px, 20px, $white);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @include font ('Montserrat', 400, 18px, 22px, $white);
+    letter-spacing: 0.3em;
 }
 
 @mixin font-h2 {
-    @include font ($aleo, 400, 36px, 40px, $white);
-    text-transform: capitalize;
+    @include font ('Montserrat', 700, 44px, 54px, $dark);
 }
 
-@mixin font-regular {
-    @include font ($josefin, 300, 16px, 28px, $white);
-    letter-spacing: 0.1em;
-}
-
-@mixin font-button {
-    @include font ($aleo, 400, 16px, 20px, $white);
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-}
-
-@mixin font-input {
-    @include font ($josefin, 400, 14px, 20px, $gray);
-    letter-spacing: 0.2em;
-}
-
-@mixin font-scroll {
-    @include font ($josefin, 400, 14px, 20px, $white);
-    letter-spacing: 0.2em;
-}
-
-@mixin font-search-button {
-    @include font ($aleo, 400, 14px, 20px, $white);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+@mixin font-h2-white {
+    @include font ('Montserrat', 700, 44px, 54px, $white);
 }
 
 @mixin font-h3 {
-    @include font ($josefin, 400, 20px, 28px, $white);
-    text-transform: uppercase;
+    @include font ('Montserrat', 400, 22px, 27px, $dark);
 }
 
-@mixin font-spain{
-    @include font ($josefin, 300, 20px, 28px, $white);
-    letter-spacing: 0.1em;
+@mixin font-h3-bold {
+    @include font ('Montserrat', 700, 22px, 27px, $dark);
 }
 
-@mixin font-footer{
-    @include font ($josefin, 400, 14px, 20px, $white);
-    letter-spacing: 0.2em;
+@mixin font-p-what-we-do {
+    @include font ('Open Sans', 400, 18px, 30px, $dark);
 }
+
+@mixin font-p-news {
+    @include font ('Open Sans', 400, 18px, 25px, $dark);
+}
+
+@mixin font-h4 {
+    @include font ('Montserrat', 400, 17px, 22px, $dark);
+}
+
+@mixin font-date {
+    @include font ('Montserrat', 400, 14px, 17px, $blue);
+}
+
+@mixin font-button {
+    @include font ('Montserrat', 400, 14px, 17px, $black);
+}
+
+@mixin font-location {
+    @include font ('Open Sans', 400, 15px, 20px, $black);
+    font-style: italic;
+}
+
+@mixin font-copyright {
+    @include font ('Montserrat', 400, 14px, 17px, $white);
+}
+
+@mixin font-form {
+    @include font ('Montserrat', 400, 18px, 27px, $black);
+}
+
+@mixin container {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+
+
+
+
+
+
 
 @mixin mobile-size {
     @media (max-width: ($tablet - 1px)) {
@@ -105,18 +111,4 @@
     @media (min-width: $size) {
         @content;
     }
-}
-
-@mixin container {
-    max-width: 1320px;
-    margin: 0 auto;
-
-    @include desktop-size {
-        max-width: 1140px;
-    }
-
-    @include size (1200px) {
-        margin: 0 3%;
-    }
-
 }

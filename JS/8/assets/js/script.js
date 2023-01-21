@@ -3,6 +3,7 @@
 
     let textContainer = document.getElementById('task-1');
     document.addEventListener('keydown', function(event) {
+        console.log(event)
         if (event.ctrlKey && event.code === 'KeyE') {
             event.preventDefault();
             let textDiv = document.getElementById('div-text');

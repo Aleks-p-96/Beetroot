@@ -1,0 +1,38 @@
+.nav {
+
+    &__list {
+        display: flex;
+        gap: 93px;
+        align-items: center;
+    }
+
+    &__item {
+
+    }
+
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-nav;
+
+        &:before {
+            border-radius: 50%;
+            border: 1px solid $white;
+            left: -14px;
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 9px;
+            height: 9px;
+        }
+
+        &:hover {
+            &.nav__link::before {
+                background-color: $white;
+            }
+        }
+    }
+}
