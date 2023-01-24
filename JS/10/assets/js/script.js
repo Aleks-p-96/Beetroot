@@ -115,7 +115,7 @@ function removePagination() {
 }
 
 function addListenerToPaginationItems() {
-    let ulItems = document.querySelectorAll('#search-pagination li');
+    let ulItems = document.querySelectorAll('#search-pagination li'),
         form = document.getElementById('search-form');
 
     if(ulItems.length === 0) {
