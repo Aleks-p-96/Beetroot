@@ -140,6 +140,10 @@
     @include size(768px) {
         max-width: 70%;
         padding-top: 450px;
+        
+    }
+    @include size(480px) {
+        padding-top: 500px;
     }
 }
 

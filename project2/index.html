@@ -12,7 +12,27 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Monticello</title>
     <meta name="description" content="BHROMAON Safe Travel Anywhere">
-    <meta name="robots" content="noindex, nofollow">   
+    <meta name="robots" content="noindex, nofollow">  
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/faviconapple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header class="header">
@@ -26,22 +46,22 @@
                     <nav id="nav" class="header__nav nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="#" class="nav__link">
+                                <a href="#" data-scroll="aboutUs" class="nav__link">
                                     ABOUT US
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">
+                                <a href="#" data-scroll="projects" class="nav__link">
                                     PROJECTS
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">
+                                <a href="#" data-scroll="news" class="nav__link">
                                     NEWS
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">
+                                <a href="#" data-scroll="contact" class="nav__link">
                                     CONTACT
                                 </a>
                             </li>
@@ -148,7 +168,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="what">
+        <section id="aboutUs" class="what">
             <div class="what__container">
                 <div class="what__wrapper">
                     <h2 class="what__title">
@@ -207,7 +227,7 @@
                 </div>
             </div>
         </section>
-        <section class="latest">
+        <section id="news" class="latest">
             <img src="assets/images/latest-news/Background.png" alt="" class="latest__background">
             <div class="latest__container">
                 <h2 class="latest__title">
@@ -382,7 +402,7 @@
                 </div>      
             </div>
         </section>
-        <section class="gallery">
+        <section id="projects" class="gallery">
             <div class="gallery__container">
                 <div class="gallery__wrapper">
                     <h2 class="gallery__title">
@@ -418,7 +438,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__block-form footer__container">
+        <div id="contact" class="footer__block-form footer__container">
                 <h2 class="footer__title">
                     GET IN TOUCH
                 </h2>
@@ -449,10 +469,10 @@
                             </span>
                         </p>
                     </div>
-                    <form id="form" action="#" method="post" class="footer__form-form">
-                        <input id="inputName" placeholder="Name" type="text" class="footer__form-name">
-                        <input id="inputEmail" placeholder="Email" type="email" class="footer__form-email">
-                        <button class="footer__form-button">
+                    <form id="form" action="#" method="get" class="footer__form-form">
+                        <input id="inputName" placeholder="Name" required autocomplete="off" type="text" class="footer__form-name">
+                        <input id="inputEmail" placeholder="Email" required autocomplete="email" type="email" class="footer__form-email">
+                        <button  class="footer__form-button">
                             SUBMIT
                         </button>
                     </form>

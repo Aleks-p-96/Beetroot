@@ -47,11 +47,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let burger = document.getElementById('burger');
     if (burger) {
         burger.addEventListener('click', menuHandler);
-        console.log(burger);
     }
 
+    let navLinks = document.querySelectorAll('.nav__link');
+    if (navLinks) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', clickOnLink)
+        });
+    }
+
+    let galleryImages = document.querySelectorAll('.gallery__gallery-item');
+    galleryImages.forEach(images => {
+        images.addEventListener('click', imageZoom)
+    })
+
+    let arrow = document.querySelector('.header__arrow');
+    arrow.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: document.getElementById('aboutUs').getBoundingClientRect().top + scrollY,
+            behavior: 'smooth',
+        })
+    })
+
+    
 
 })
+
+function imageZoom(e) {
+    console.log(e.currentTarget);
+    e.currentTarget.classList.toggle('active');
+    document.body.classList.toggle('locked')
+}
+
+function clickOnLink(e) {
+    e.preventDefault();
+    let link = e.target;
+    if (link.dataset.scroll && document.getElementById(link.dataset.scroll)) {
+        let blockToScroll = document.getElementById(link.dataset.scroll);
+        let scrollCoord = blockToScroll.getBoundingClientRect().top + scrollY;
+        closeForScroll();
+        window.scrollTo({
+            top: scrollCoord,
+            behavior: "smooth",
+        });
+    }
+}
 
 function menuHandler(e) {
     let body = document.body,
@@ -62,7 +103,16 @@ function menuHandler(e) {
         menu.classList.toggle('active');
         body.classList.toggle('locked');
     }
-
+}
+function closeForScroll(e) {
+    let body = document.body,
+        menu = document.getElementById('nav'),
+        burger = document.getElementById('burger');
+    if (burger.classList.contains('active')) {
+        burger.classList.remove('active');
+        body.classList.remove('locked');
+        menu.classList.remove('active');
+    }
 }
 
 
