@@ -40,11 +40,18 @@
         &--reverse {
             flex-direction: row-reverse;
         }
+        @include size(768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__block-image {
         position: relative;
         width: 50%;
+        @include size(768px) {
+            width: 100%;
+        }
         &::before {
             bottom: 57px;
             position: absolute;
@@ -74,6 +81,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @include size(768px) {
+            width: 100%;
+        }
     }
 
     &__block-subtitle {
@@ -85,7 +95,10 @@
     }
 
     &__block-title + &__block-description {
-        margin: 19px 0 40px 0
+        margin: 19px 0 40px 0;
+        @include size(768px) {
+            margin: 10px 0 15px 0;
+        }
     }
 
     &__block-description {
@@ -94,6 +107,9 @@
 
     &__block-description + &__block-button {
         margin-bottom: 60px;
+        @include size(768px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__block-button {

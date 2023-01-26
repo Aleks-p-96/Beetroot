@@ -7,21 +7,27 @@
     }
 
     &__container {
-        max-width: 770px;
-        margin: 0 auto;
-        position: relative;
-        padding: 203px 0 234px 0;
+        @include container-f;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        @include size(768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
     }
 
     &__left {
         display: flex;
         flex-direction: column;
         gap: 41px;
+        @include size(768px) {
+            order: 1;
+            align-items: center;
+        }
     }
 
     &__logo {
@@ -50,6 +56,7 @@
 
     &__title {
         @include font-h2;
+        text-align: center;
         display: flex;
         justify-content: center;
         position: relative;
@@ -73,6 +80,9 @@
     &__form-flex {
         display: flex;
         gap: 60px;
+        @include size(768px) {
+            flex-direction: column;
+        }
     }
 
     &__form-left {

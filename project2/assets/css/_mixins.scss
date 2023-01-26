@@ -16,6 +16,12 @@
 @mixin font-header-title {
     @include font ('Montserrat', 700, 80px, 98px, $white);
     letter-spacing: 0.1em;
+    @include size(1024px) {
+        @include font ('Montserrat', 700, 50px, 68px, $white);
+    }
+    @include size(768px) {
+        @include font ('Montserrat', 700, 40px, 48px, $white);
+    }
 }
 
 @mixin font-header-subtitle {
@@ -25,14 +31,38 @@
 
 @mixin font-h2 {
     @include font ('Montserrat', 700, 44px, 54px, $dark);
+    @include size(1024px) {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    @include size(768px) {
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
 
 @mixin font-h2-white {
     @include font ('Montserrat', 700, 44px, 54px, $white);
+    @include size(1024px) {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    @include size(768px) {
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
 
 @mixin font-h3 {
     @include font ('Montserrat', 400, 22px, 27px, $dark);
+    @include size(1024px) {
+        font-size: 19px;
+        line-height: 23px;
+    }
+    @include size(768px) {
+        font-size: 17px;
+        line-height: 23px;
+    }
 }
 
 @mixin font-h3-bold {
@@ -41,6 +71,9 @@
 
 @mixin font-p-what-we-do {
     @include font ('Open Sans', 400, 18px, 30px, $dark);
+    @include size(768px) {
+        font-size: 15px;
+    }
 }
 
 @mixin font-p-news {
@@ -62,6 +95,9 @@
 @mixin font-location {
     @include font ('Open Sans', 400, 15px, 20px, $black);
     font-style: italic;
+    @include size(768px) {
+        font-size: 14px;
+    }
 }
 
 @mixin font-copyright {
@@ -74,7 +110,37 @@
 
 @mixin container {
     margin: 0 auto;
-    max-width: 1160px;
+    max-width: 1400px;
+    @include size(1500px) {
+        max-width: 1170px;
+    }
+    @include size(1280px) {
+        max-width: 950px;
+    }
+    @include size(1024px) {
+        max-width: 900px;
+    }
+    @include size(950px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+@mixin container-f {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 203px 0 234px 0;
+    @include size(1500px) {
+        max-width: 770px;
+    }
+    @include size(1014px) {
+        max-width: 670px;
+    }
+    @include size(768px) {
+        max-width: 70%;
+        padding-top: 450px;
+    }
 }
 
 

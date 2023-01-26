@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'bullets',
             clickable: true,
         },
-        slidesPerView: 3,
+        slidesPerView: 1,
         loop:  true,
         speed: 1500,
         spaceBetween: 30,
@@ -31,16 +31,39 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.latest__slider-button--next',
             prevEl: '.latest__slider-button--prev'
         },
+        breakpoints: {
+            768: {
+                slidesPerView:2,
+            },
+            1280: {
+                slidesPerView:3,
+            },
+        }
     })
     
     let map;
     window.initMap = initMap;
     
+    let burger = document.getElementById('burger');
+    if (burger) {
+        burger.addEventListener('click', menuHandler);
+        console.log(burger);
+    }
 
 
 })
 
+function menuHandler(e) {
+    let body = document.body,
+        menu = document.getElementById('nav'),
+        burger = document.getElementById('burger');
+    if (menu) {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        body.classList.toggle('locked');
+    }
 
+}
 
 
 function initMap() {
