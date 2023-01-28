@@ -1,0 +1,19 @@
+{
+    "path": {
+        "src": {
+            "srcPath": "./src",
+            "components": "/_components",
+            "html": [
+                "/**/*.html"
+            ],
+            "style": [
+                "/assets/css/style.scss"
+            ]
+        },
+        "dist": {
+            "distPath": "./dist",
+            "html": "/",
+            "style": "/assets/css/"
+        }
+    }
+}
