@@ -142,8 +142,11 @@
         padding-top: 450px;
         
     }
-    @include size(480px) {
-        padding-top: 500px;
+    @include size(550px) {
+        padding-top: 550px;
+    }
+    @include size(450px) {
+        padding-top: 650px;
     }
 }
 

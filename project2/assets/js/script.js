@@ -40,9 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         }
     })
-    
     let map;
-    window.initMap = initMap;
+    initMap();
     
     let burger = document.getElementById('burger');
     if (burger) {

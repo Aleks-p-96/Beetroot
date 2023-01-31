@@ -79,8 +79,10 @@
 
     &__form-flex {
         display: flex;
-        gap: 60px;
+        justify-content: space-between;
         @include size(768px) {
+            gap: 60px;
+            justify-content: unset;
             flex-direction: column;
         }
     }
@@ -99,6 +101,7 @@
     }
 
     &__form-info {
+        @include font-form;
         margin-left: 5px;
     }
 

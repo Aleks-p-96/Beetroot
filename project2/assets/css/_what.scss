@@ -114,6 +114,7 @@
 
     &__block-button {
         @include font-button;
+        align-self: flex-start;
     }
 
     &__block-location {

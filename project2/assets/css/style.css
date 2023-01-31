@@ -499,6 +499,7 @@ body.locked {
   font-size: 14px;
   line-height: 17px;
   color: #000000;
+  align-self: flex-start;
 }
 .what__block-location {
   font-family: "Open Sans";
@@ -874,9 +875,14 @@ body.locked {
     padding-top: 450px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .footer__container {
-    padding-top: 500px;
+    padding-top: 550px;
+  }
+}
+@media (max-width: 450px) {
+  .footer__container {
+    padding-top: 650px;
   }
 }
 .footer__wrapper {
@@ -959,10 +965,12 @@ body.locked {
 }
 .footer__form-flex {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .footer__form-flex {
+    gap: 60px;
+    justify-content: unset;
     flex-direction: column;
   }
 }
@@ -975,6 +983,11 @@ body.locked {
   margin-top: 35px;
 }
 .footer__form-info {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
   margin-left: 5px;
 }
 .footer__form-form {

@@ -1,0 +1,96 @@
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+    padding: 100px;
+}
+
+.form__name, .form__role {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: #545454;
+    padding: 8px 10px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.form__button {
+    width: 100px;
+    background-color: #007BFF;
+    border: 1px solid #E4E4E4;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #FFFFFF;
+}
+.h2 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+.current-user {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+#second {
+    margin-top: 100px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+#clock-blocks {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.clock-block {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clock-clock {
+    width: 170px;
+    height: 170px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    align-items: center;
+}
+.clock-btns {
+    display: flex;
+    gap: 20px;
+}
+.clock-btn {
+    border-radius: 15%;
+    width: 60px;
+    height: 30px;
+}
+.time {
+    background-color:#000AFF
+}
+.date {
+    background-color: #A9FB58;
+}
+.delete {
+    background-color: #FE0303;
+}
