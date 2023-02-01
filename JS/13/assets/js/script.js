@@ -124,7 +124,8 @@ function addClock() {
     let clockNameField = document.getElementById('clock-input'),
         targetBlock = document.getElementById('clock-blocks'),
         clockSelectField = document.getElementById('clock-select');
-    if (clockNameField.value) {
+    if (clockNameField.value && !document.getElementById(clockNameField.value + '_del')) {
+        console.log(document.getElementById(clockNameField.value + '_del'))
         let newClock = createClock(clockNameField.value,clockSelectField.value);
         targetBlock.append(newClock);
     }
