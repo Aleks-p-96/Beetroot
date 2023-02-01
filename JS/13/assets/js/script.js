@@ -85,73 +85,138 @@ function addUser() {
 
 // 3 кнопка — видаляє годинник зі «стіни» годинників
 
-// class Clock {
-//     getCurrentDate() {
-//         // console.log(event.target)
-//         let x = new Date;
-//         x.setDate(x.getDate() - 2)
-//         return `${x.getDate()}.${x.getMonth() + 1}.${x.getFullYear()}`;
-//     }
-//     getCurrentDateTime() {
-//         let x = new Date;
-//         x.setDate(x.getDate() - 2)
-//         return `${x.getDate()}.${x.getMonth() + 1}.${x.getFullYear()}\n${x.getHours()}:${x.getMinutes()}`;
-//     }
-//     deleteClock() {
+class Clock {
+    getCurrentTime(utc) {
+        // console.log(event.target)
+        let x = new Date;
+        console.log(x)
+        x.setHours(x.getHours() - 2 + +utc)
+        console.log(x)
+        return `${x.getHours()}:${x.getMinutes()}`;
+    }
+    getCurrentDate(utc) {
+        let x = new Date;
+        console.log(x)
+        x.setHours(x.getHours() - 2 + +utc)
+        console.log(x)
+        return `${x.getDate()}.${x.getMonth() + 1}.${x.getFullYear()}`;
+    }
+    deleteClock(element) {
 
-//     }
-// }
+    }
+}
 
-// let clock = new Clock;
-// console.log(clock.getCurrentDate());
-// console.log(clock.getCurrentDateTime());
+let clock = new Clock
+// clock.getCurrentDateTime(-2)
+// console.log(clock.getCurrentDateTime(-2))
 
-// let clockAddBtn = document.getElementById('add-clock');
-
-
-// clockAddBtn.addEventListener('click', (e) => {
-//     addClock();
-// })
-
+let clockAddBtn = document.getElementById('add-clock');
 
 
-
-// function addClock() {
-//     let clockNameField = document.getElementById('clock-input'),
-//         targetBlock = document.getElementById('clock-blocks'),
-//         clockSelectField = document.getElementById('clock-select');
-//     if (clockNameField.value) {
-//         let div = document.createElement('div');
-//         div.classList.add('clock-block');
-//         let divC = document.createElement('div');
-//         divC.dataset.name = clockNameField.value;
-//         divC.innerText = clockNameField.value;
-//         divC.classList.add('clock-clock');
-//         let divB = document.createElement('div');
-//         divB.classList.add('clock-btns');
-//         let btnTime = document.createElement('button');
-//         let btnDate = document.createElement('button');
-//         let btnDelete = document.createElement('button');
-//         btnTime.classList.add('clock-btn')
-//         btnDate.classList.add('clock-btn')
-//         btnDelete.classList.add('clock-btn')
-//         btnTime.classList.add('time')
-//         btnDate.classList.add('date')
-//         btnDelete.classList.add('delete')
-//         divB.append(btnTime)
-//         divB.append(btnDate)
-//         divB.append(btnDelete)
-//         div.append(divC)
-//         div.append(divB)
-//         targetBlock.append(div)
-//         // btnTime.addEventListener('click', clock.getCurrentDateTime(btnTime.closest('.clock-clock')))
-//         // btnDate.addEventListener('click', clock.getCurrentDate(btnDate))
-//         btnDelete.addEventListener('click', clock.deleteClock)
-//         console.log(btnTime.closest('#clock-block'))
-//     }
-// }
+clockAddBtn.addEventListener('click', (e) => {
+    addClock();
+})
 
 
 
 
+function addClock() {
+    let clockNameField = document.getElementById('clock-input'),
+        targetBlock = document.getElementById('clock-blocks'),
+        clockSelectField = document.getElementById('clock-select');
+    if (clockNameField.value) {
+        let newClock = createClock(clockNameField.value,clockSelectField.value);
+        targetBlock.append(newClock);
+    }
+}
 
+
+function createClock(name,utc) {
+    let div = document.createElement('div');
+    div.classList.add('clock-block')
+    div.id = name + '_del'
+    let clockBody = createClockBody(name);
+    let clockBtns = createClockBtnBlock(name,utc)
+    div.append(clockBody)
+    div.append(clockBtns)
+    return div;
+}
+
+function createClockBody(name) {
+    let nameP = document.createElement('p');
+    let timeP = document.createElement('p');
+    timeP.id = name + 'time';
+    let timeDateP = document.createElement('p');
+    timeDateP.id = name + 'date';
+    let clockBody = document.createElement('div');
+    clockBody.classList.add('clock-clock');
+    clockBody.dataset.textInside = name;
+    nameP.innerText = name;
+    clockBody.append(nameP);
+    clockBody.append(timeP);
+    clockBody.append(timeDateP);
+    return clockBody;
+}
+
+function createClockBtnBlock(name,utc) {
+    let clockBtns = document.createElement('div');
+    clockBtns.classList.add('clock-btns');
+    let timeBtn = createTimeBtn(name,utc);
+    let timeDateBtn = createTimeDateBtn(name,utc);
+    let deleteBtn = createDeleteBtn(name);
+    clockBtns.append(timeBtn);
+    clockBtns.append(timeDateBtn);
+    clockBtns.append(deleteBtn);
+    return clockBtns;
+}
+
+function createTimeBtn(name,utc) {
+    let btn = document.createElement('button');
+    btn.classList.add('clock-btn');
+    btn.classList.add('time');
+    btnTimeAddListener(btn, utc, name);
+    return btn;
+}
+
+function createTimeDateBtn(name,utc) {
+    let btn = document.createElement('button');
+    btn.classList.add('clock-btn');
+    btn.classList.add('date');
+    btnDateAddListener(btn,utc, name);
+    return btn;
+}
+
+function createDeleteBtn(name) {
+    let btn = document.createElement('button');
+    btn.classList.add('clock-btn');
+    btn.classList.add('delete');
+    btnDeleteAddListener(btn, name);
+    return btn;
+}
+
+function btnTimeAddListener(btn, utc, name) {
+    btn.addEventListener('click', (e) => {
+        let clock = new Clock;
+        let timeP = document.getElementById(name + 'time');
+        let timeD = document.getElementById(name + 'date');
+        timeD.innerHTML ='';
+        timeP.innerHTML = clock.getCurrentTime(utc);
+    })
+}
+
+function btnDateAddListener(btn, utc, name) {
+    btn.addEventListener('click', (e) => {
+        let clock = new Clock;
+        let timeP = document.getElementById(name + 'time');
+        let timeD = document.getElementById(name + 'date');
+        timeP.innerHTML = clock.getCurrentTime(utc);
+        timeD.innerHTML = clock.getCurrentDate(utc);
+    })
+}
+
+function btnDeleteAddListener(btn, name) {
+    btn.addEventListener('click', (e) => {
+        let deleteBlock = document.getElementById(name + '_del');
+        deleteBlock.remove();
+    })
+}
